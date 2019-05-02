@@ -1,2 +1,2 @@
 # time_series_analysis
-Performing time series analysis on sales data.
+Performing time series analysis on sales data for forecasting.
