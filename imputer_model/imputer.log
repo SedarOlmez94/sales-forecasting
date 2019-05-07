@@ -1,0 +1,1111 @@
+2019-05-07 14:14:50,772 [INFO]  Using [[cpu(0)]] as the context for training
+2019-05-07 14:14:50,869 [INFO]  Fitting label encoder <class 'datawig.column_encoders.NumericalEncoder'> on 303530 rows                             of training data
+2019-05-07 14:14:50,887 [INFO]  Detected 0 rows with missing labels                         for column Promotion1
+2019-05-07 14:14:50,890 [INFO]  Dropping 0/303530 rows
+2019-05-07 14:14:50,907 [INFO]  Detected 21759 rows with missing labels                         for column Promotion1
+2019-05-07 14:14:50,908 [INFO]  Dropping 21759/33725 rows
+2019-05-07 14:14:50,910 [INFO]  Train: 303530, Test: 11966
+2019-05-07 14:14:50,910 [INFO]  Fitting data encoder <class 'datawig.column_encoders.NumericalEncoder'> on columns Store, Dept, Weekly_Sales, Temperature, Fuel_Price, Promotion2, Promotion3, Promotion4, Promotion5, CPI, Unemployment and 303530 rows of training data with parameters {'input_columns': ['Store', 'Dept', 'Weekly_Sales', 'Temperature', 'Fuel_Price', 'Promotion2', 'Promotion3', 'Promotion4', 'Promotion5', 'CPI', 'Unemployment'], 'output_column': 'numerical_features-2yW4Acq9GF', 'output_dim': 11, 'normalize': True, 'scaler': None}
+2019-05-07 14:14:51,054 [INFO]  Building Train Iterator with 303530 elements
+2019-05-07 14:14:51,669 [INFO]  Concatenating numeric columns ['Store', 'Dept', 'Weekly_Sales', 'Temperature', 'Fuel_Price', 'Promotion2', 'Promotion3', 'Promotion4', 'Promotion5', 'CPI', 'Unemployment'] into numerical_features-2yW4Acq9GF
+2019-05-07 14:14:51,669 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:14:51,722 [INFO]  Data Encoding - Encoded 303536 rows of column                         Store,Dept,Weekly_Sales,Temperature,Fuel_Price,Promotion2,Promotion3,Promotion4,Promotion5,CPI,Unemployment with <class 'datawig.column_encoders.NumericalEncoder'> into                         <class 'numpy.ndarray'> of shape (303536, 11)                         and then into shape (303536, 11)
+2019-05-07 14:14:51,726 [INFO]  Concatenating numeric columns ['Promotion1'] into Promotion1
+2019-05-07 14:14:51,726 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:14:51,730 [INFO]  Label Encoding - Encoded 303536 rows of column                             Promotion1 with <class 'datawig.column_encoders.NumericalEncoder'> into                             <class 'numpy.ndarray'> of shape (303536, 1) and                             then into shape (303536, 1)
+2019-05-07 14:14:51,733 [INFO]  Building Test Iterator with 11966 elements
+2019-05-07 14:14:51,768 [INFO]  Concatenating numeric columns ['Store', 'Dept', 'Weekly_Sales', 'Temperature', 'Fuel_Price', 'Promotion2', 'Promotion3', 'Promotion4', 'Promotion5', 'CPI', 'Unemployment'] into numerical_features-2yW4Acq9GF
+2019-05-07 14:14:51,768 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:14:51,771 [INFO]  Data Encoding - Encoded 11968 rows of column                         Store,Dept,Weekly_Sales,Temperature,Fuel_Price,Promotion2,Promotion3,Promotion4,Promotion5,CPI,Unemployment with <class 'datawig.column_encoders.NumericalEncoder'> into                         <class 'numpy.ndarray'> of shape (11968, 11)                         and then into shape (11968, 11)
+2019-05-07 14:14:51,773 [INFO]  Concatenating numeric columns ['Promotion1'] into Promotion1
+2019-05-07 14:14:51,773 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:14:51,774 [INFO]  Label Encoding - Encoded 11968 rows of column                             Promotion1 with <class 'datawig.column_encoders.NumericalEncoder'> into                             <class 'numpy.ndarray'> of shape (11968, 1) and                             then into shape (11968, 1)
+2019-05-07 14:14:51,783 [INFO]  Concatenating all 1 latent symbols
+2019-05-07 14:14:51,783 [INFO]  Constructing numerical loss for column Promotion1
+2019-05-07 14:14:51,785 [INFO]  Building output symbols
+2019-05-07 14:14:51,797 [INFO]  
+========== start: fit model
+2019-05-07 14:14:51,797 [WARNING]  Already bound, ignoring bind()
+2019-05-07 14:14:59,213 [INFO]  Epoch[0] Batch [0-9486]	Speed: 20508.33 samples/sec	cross-entropy=4.913774	Promotion1-accuracy=0.000000
+2019-05-07 14:15:06,615 [INFO]  Epoch[0] Train-cross-entropy=4.508455
+2019-05-07 14:15:06,615 [INFO]  Epoch[0] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:15:06,615 [INFO]  Epoch[0] Time cost=14.816
+2019-05-07 14:15:06,618 [INFO]  Saved checkpoint to "imputer_model/model-0000.params"
+2019-05-07 14:15:06,848 [INFO]  Epoch[0] Validation-cross-entropy=10.674925
+2019-05-07 14:15:06,848 [INFO]  Epoch[0] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:15:14,264 [INFO]  Epoch[1] Batch [0-9486]	Speed: 20468.36 samples/sec	cross-entropy=4.046990	Promotion1-accuracy=0.000000
+2019-05-07 14:15:21,776 [INFO]  Epoch[1] Train-cross-entropy=3.897004
+2019-05-07 14:15:21,776 [INFO]  Epoch[1] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:15:21,776 [INFO]  Epoch[1] Time cost=14.928
+2019-05-07 14:15:21,778 [INFO]  Saved checkpoint to "imputer_model/model-0001.params"
+2019-05-07 14:15:22,015 [INFO]  Epoch[1] Validation-cross-entropy=10.160733
+2019-05-07 14:15:22,016 [INFO]  Epoch[1] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:15:29,356 [INFO]  Epoch[2] Batch [0-9486]	Speed: 20679.89 samples/sec	cross-entropy=3.788398	Promotion1-accuracy=0.000000
+2019-05-07 14:15:36,761 [INFO]  Epoch[2] Train-cross-entropy=3.677049
+2019-05-07 14:15:36,761 [INFO]  Epoch[2] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:15:36,761 [INFO]  Epoch[2] Time cost=14.746
+2019-05-07 14:15:36,763 [INFO]  Saved checkpoint to "imputer_model/model-0002.params"
+2019-05-07 14:15:36,984 [INFO]  Epoch[2] Validation-cross-entropy=9.436832
+2019-05-07 14:15:36,984 [INFO]  Epoch[2] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:15:44,397 [INFO]  Epoch[3] Batch [0-9486]	Speed: 20476.29 samples/sec	cross-entropy=3.633701	Promotion1-accuracy=0.000000
+2019-05-07 14:15:51,813 [INFO]  Epoch[3] Train-cross-entropy=3.545295
+2019-05-07 14:15:51,814 [INFO]  Epoch[3] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:15:51,814 [INFO]  Epoch[3] Time cost=14.830
+2019-05-07 14:15:51,815 [INFO]  Saved checkpoint to "imputer_model/model-0003.params"
+2019-05-07 14:15:52,056 [INFO]  Epoch[3] Validation-cross-entropy=8.844125
+2019-05-07 14:15:52,056 [INFO]  Epoch[3] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:15:59,379 [INFO]  Epoch[4] Batch [0-9486]	Speed: 20730.07 samples/sec	cross-entropy=3.531996	Promotion1-accuracy=0.000000
+2019-05-07 14:16:06,762 [INFO]  Epoch[4] Train-cross-entropy=3.444730
+2019-05-07 14:16:06,762 [INFO]  Epoch[4] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:16:06,762 [INFO]  Epoch[4] Time cost=14.706
+2019-05-07 14:16:06,764 [INFO]  Saved checkpoint to "imputer_model/model-0004.params"
+2019-05-07 14:16:06,990 [INFO]  Epoch[4] Validation-cross-entropy=8.804999
+2019-05-07 14:16:06,990 [INFO]  Epoch[4] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:16:14,303 [INFO]  Epoch[5] Batch [0-9486]	Speed: 20757.55 samples/sec	cross-entropy=3.450605	Promotion1-accuracy=0.000000
+2019-05-07 14:16:21,686 [INFO]  Epoch[5] Train-cross-entropy=3.373137
+2019-05-07 14:16:21,687 [INFO]  Epoch[5] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:16:21,687 [INFO]  Epoch[5] Time cost=14.696
+2019-05-07 14:16:21,688 [INFO]  Saved checkpoint to "imputer_model/model-0005.params"
+2019-05-07 14:16:21,933 [INFO]  Epoch[5] Validation-cross-entropy=8.544359
+2019-05-07 14:16:21,933 [INFO]  Epoch[5] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:16:29,347 [INFO]  Epoch[6] Batch [0-9486]	Speed: 20474.77 samples/sec	cross-entropy=3.388451	Promotion1-accuracy=0.000000
+2019-05-07 14:16:36,714 [INFO]  Epoch[6] Train-cross-entropy=3.320532
+2019-05-07 14:16:36,714 [INFO]  Epoch[6] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:16:36,714 [INFO]  Epoch[6] Time cost=14.781
+2019-05-07 14:16:36,716 [INFO]  Saved checkpoint to "imputer_model/model-0006.params"
+2019-05-07 14:16:36,944 [INFO]  Epoch[6] Validation-cross-entropy=8.384987
+2019-05-07 14:16:36,944 [INFO]  Epoch[6] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:16:44,382 [INFO]  Epoch[7] Batch [0-9486]	Speed: 20408.57 samples/sec	cross-entropy=3.349953	Promotion1-accuracy=0.000000
+2019-05-07 14:16:51,776 [INFO]  Epoch[7] Train-cross-entropy=3.272747
+2019-05-07 14:16:51,776 [INFO]  Epoch[7] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:16:51,776 [INFO]  Epoch[7] Time cost=14.831
+2019-05-07 14:16:51,778 [INFO]  Saved checkpoint to "imputer_model/model-0007.params"
+2019-05-07 14:16:52,019 [INFO]  Epoch[7] Validation-cross-entropy=8.516978
+2019-05-07 14:16:52,019 [INFO]  Epoch[7] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:16:59,486 [INFO]  Epoch[8] Batch [0-9486]	Speed: 20329.11 samples/sec	cross-entropy=3.304793	Promotion1-accuracy=0.000000
+2019-05-07 14:17:06,895 [INFO]  Epoch[8] Train-cross-entropy=3.238501
+2019-05-07 14:17:06,895 [INFO]  Epoch[8] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:17:06,895 [INFO]  Epoch[8] Time cost=14.876
+2019-05-07 14:17:06,897 [INFO]  Saved checkpoint to "imputer_model/model-0008.params"
+2019-05-07 14:17:07,124 [INFO]  Epoch[8] Validation-cross-entropy=8.272718
+2019-05-07 14:17:07,124 [INFO]  Epoch[8] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:17:14,563 [INFO]  Epoch[9] Batch [0-9486]	Speed: 20406.14 samples/sec	cross-entropy=3.274682	Promotion1-accuracy=0.000000
+2019-05-07 14:17:21,970 [INFO]  Epoch[9] Train-cross-entropy=3.207465
+2019-05-07 14:17:21,970 [INFO]  Epoch[9] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:17:21,970 [INFO]  Epoch[9] Time cost=14.847
+2019-05-07 14:17:21,972 [INFO]  Saved checkpoint to "imputer_model/model-0009.params"
+2019-05-07 14:17:22,210 [INFO]  Epoch[9] Validation-cross-entropy=8.331034
+2019-05-07 14:17:22,211 [INFO]  Epoch[9] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:17:22,211 [INFO]  
+========== done (150.41386008262634 s) fit model
+2019-05-07 14:17:22,794 [INFO]  Expected calibration error: 92.9%
+2019-05-07 14:17:23,426 [INFO]  Expected calibration error after calibration: 92.9%
+2019-05-07 14:17:24,006 [INFO]  save metrics in imputer_model/fit-test-metrics.json
+2019-05-07 14:17:24,007 [INFO]  Keeping imputer_model/model-0008.params
+2019-05-07 14:17:24,007 [INFO]  Deleting imputer_model/model-0003.params
+2019-05-07 14:17:24,007 [INFO]  Deleting imputer_model/model-0005.params
+2019-05-07 14:17:24,007 [INFO]  Deleting imputer_model/model-0007.params
+2019-05-07 14:17:24,007 [INFO]  Deleting imputer_model/model-0002.params
+2019-05-07 14:17:24,008 [INFO]  Deleting imputer_model/model-0009.params
+2019-05-07 14:17:24,008 [INFO]  Deleting imputer_model/model-0006.params
+2019-05-07 14:17:24,008 [INFO]  Deleting imputer_model/model-0000.params
+2019-05-07 14:17:24,008 [INFO]  Deleting imputer_model/model-0001.params
+2019-05-07 14:17:24,008 [INFO]  Deleting imputer_model/model-0004.params
+2019-05-07 14:17:24,227 [INFO]  Concatenating numeric columns ['Store', 'Dept', 'Weekly_Sales', 'Temperature', 'Fuel_Price', 'Promotion2', 'Promotion3', 'Promotion4', 'Promotion5', 'CPI', 'Unemployment'] into numerical_features-2yW4Acq9GF
+2019-05-07 14:17:24,227 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:17:24,233 [INFO]  Data Encoding - Encoded 84320 rows of column                         Store,Dept,Weekly_Sales,Temperature,Fuel_Price,Promotion2,Promotion3,Promotion4,Promotion5,CPI,Unemployment with <class 'datawig.column_encoders.NumericalEncoder'> into                         <class 'numpy.ndarray'> of shape (84320, 11)                         and then into shape (84320, 11)
+2019-05-07 14:17:24,236 [INFO]  Concatenating numeric columns ['Promotion1'] into Promotion1
+2019-05-07 14:17:24,236 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:17:24,237 [INFO]  Label Encoding - Encoded 84320 rows of column                             Promotion1 with <class 'datawig.column_encoders.NumericalEncoder'> into                             <class 'numpy.ndarray'> of shape (84320, 1) and                             then into shape (84320, 1)
+2019-05-07 14:17:25,999 [INFO]  Top-k only for CategoricalEncoder, dropping Promotion1, <class 'datawig.column_encoders.NumericalEncoder'>
+2019-05-07 14:17:25,999 [INFO]  Precision filtering only for CategoricalEncoder returning                             Promotion1 unfiltered
+2019-05-07 14:21:09,948 [INFO]  Using [[cpu(0)]] as the context for training
+2019-05-07 14:21:10,037 [INFO]  Fitting label encoder <class 'datawig.column_encoders.NumericalEncoder'> on 303530 rows                             of training data
+2019-05-07 14:21:10,053 [INFO]  Detected 0 rows with missing labels                         for column Promotion1
+2019-05-07 14:21:10,056 [INFO]  Dropping 0/303530 rows
+2019-05-07 14:21:10,073 [INFO]  Detected 21759 rows with missing labels                         for column Promotion1
+2019-05-07 14:21:10,074 [INFO]  Dropping 21759/33725 rows
+2019-05-07 14:21:10,076 [INFO]  Train: 303530, Test: 11966
+2019-05-07 14:21:10,076 [INFO]  Fitting data encoder <class 'datawig.column_encoders.NumericalEncoder'> on columns Store, Dept, Weekly_Sales, Temperature, Fuel_Price, Promotion2, Promotion3, Promotion4, Promotion5, CPI, Unemployment and 303530 rows of training data with parameters {'input_columns': ['Store', 'Dept', 'Weekly_Sales', 'Temperature', 'Fuel_Price', 'Promotion2', 'Promotion3', 'Promotion4', 'Promotion5', 'CPI', 'Unemployment'], 'output_column': 'numerical_features-2yW4Acq9GF', 'output_dim': 11, 'normalize': True, 'scaler': None}
+2019-05-07 14:21:10,220 [INFO]  Building Train Iterator with 303530 elements
+2019-05-07 14:21:10,816 [INFO]  Concatenating numeric columns ['Store', 'Dept', 'Weekly_Sales', 'Temperature', 'Fuel_Price', 'Promotion2', 'Promotion3', 'Promotion4', 'Promotion5', 'CPI', 'Unemployment'] into numerical_features-2yW4Acq9GF
+2019-05-07 14:21:10,816 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:21:10,858 [INFO]  Data Encoding - Encoded 303536 rows of column                         Store,Dept,Weekly_Sales,Temperature,Fuel_Price,Promotion2,Promotion3,Promotion4,Promotion5,CPI,Unemployment with <class 'datawig.column_encoders.NumericalEncoder'> into                         <class 'numpy.ndarray'> of shape (303536, 11)                         and then into shape (303536, 11)
+2019-05-07 14:21:10,862 [INFO]  Concatenating numeric columns ['Promotion1'] into Promotion1
+2019-05-07 14:21:10,862 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:21:10,866 [INFO]  Label Encoding - Encoded 303536 rows of column                             Promotion1 with <class 'datawig.column_encoders.NumericalEncoder'> into                             <class 'numpy.ndarray'> of shape (303536, 1) and                             then into shape (303536, 1)
+2019-05-07 14:21:10,869 [INFO]  Building Test Iterator with 11966 elements
+2019-05-07 14:21:10,904 [INFO]  Concatenating numeric columns ['Store', 'Dept', 'Weekly_Sales', 'Temperature', 'Fuel_Price', 'Promotion2', 'Promotion3', 'Promotion4', 'Promotion5', 'CPI', 'Unemployment'] into numerical_features-2yW4Acq9GF
+2019-05-07 14:21:10,904 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:21:10,906 [INFO]  Data Encoding - Encoded 11968 rows of column                         Store,Dept,Weekly_Sales,Temperature,Fuel_Price,Promotion2,Promotion3,Promotion4,Promotion5,CPI,Unemployment with <class 'datawig.column_encoders.NumericalEncoder'> into                         <class 'numpy.ndarray'> of shape (11968, 11)                         and then into shape (11968, 11)
+2019-05-07 14:21:10,908 [INFO]  Concatenating numeric columns ['Promotion1'] into Promotion1
+2019-05-07 14:21:10,908 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:21:10,909 [INFO]  Label Encoding - Encoded 11968 rows of column                             Promotion1 with <class 'datawig.column_encoders.NumericalEncoder'> into                             <class 'numpy.ndarray'> of shape (11968, 1) and                             then into shape (11968, 1)
+2019-05-07 14:21:10,918 [INFO]  Concatenating all 1 latent symbols
+2019-05-07 14:21:10,918 [INFO]  Constructing numerical loss for column Promotion1
+2019-05-07 14:21:10,919 [INFO]  Building output symbols
+2019-05-07 14:21:10,921 [INFO]  
+========== start: fit model
+2019-05-07 14:21:10,921 [WARNING]  Already bound, ignoring bind()
+2019-05-07 14:21:18,480 [INFO]  Epoch[0] Batch [0-9486]	Speed: 20097.75 samples/sec	cross-entropy=4.913774	Promotion1-accuracy=0.000000
+2019-05-07 14:21:26,070 [INFO]  Epoch[0] Train-cross-entropy=4.508455
+2019-05-07 14:21:26,071 [INFO]  Epoch[0] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:21:26,071 [INFO]  Epoch[0] Time cost=15.148
+2019-05-07 14:21:26,073 [INFO]  Saved checkpoint to "imputer_model/model-0000.params"
+2019-05-07 14:21:26,304 [INFO]  Epoch[0] Validation-cross-entropy=10.674925
+2019-05-07 14:21:26,304 [INFO]  Epoch[0] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:21:33,879 [INFO]  Epoch[1] Batch [0-9486]	Speed: 20040.71 samples/sec	cross-entropy=4.046990	Promotion1-accuracy=0.000000
+2019-05-07 14:21:41,519 [INFO]  Epoch[1] Train-cross-entropy=3.897004
+2019-05-07 14:21:41,521 [INFO]  Epoch[1] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:21:41,521 [INFO]  Epoch[1] Time cost=15.216
+2019-05-07 14:21:41,523 [INFO]  Saved checkpoint to "imputer_model/model-0001.params"
+2019-05-07 14:21:41,754 [INFO]  Epoch[1] Validation-cross-entropy=10.160733
+2019-05-07 14:21:41,754 [INFO]  Epoch[1] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:21:49,299 [INFO]  Epoch[2] Batch [0-9486]	Speed: 20120.98 samples/sec	cross-entropy=3.788398	Promotion1-accuracy=0.000000
+2019-05-07 14:21:56,854 [INFO]  Epoch[2] Train-cross-entropy=3.677049
+2019-05-07 14:21:56,854 [INFO]  Epoch[2] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:21:56,854 [INFO]  Epoch[2] Time cost=15.100
+2019-05-07 14:21:56,856 [INFO]  Saved checkpoint to "imputer_model/model-0002.params"
+2019-05-07 14:21:57,099 [INFO]  Epoch[2] Validation-cross-entropy=9.436832
+2019-05-07 14:21:57,099 [INFO]  Epoch[2] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:22:04,603 [INFO]  Epoch[3] Batch [0-9486]	Speed: 20229.37 samples/sec	cross-entropy=3.633701	Promotion1-accuracy=0.000000
+2019-05-07 14:22:12,197 [INFO]  Epoch[3] Train-cross-entropy=3.545295
+2019-05-07 14:22:12,197 [INFO]  Epoch[3] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:22:12,197 [INFO]  Epoch[3] Time cost=15.098
+2019-05-07 14:22:12,200 [INFO]  Saved checkpoint to "imputer_model/model-0003.params"
+2019-05-07 14:22:12,435 [INFO]  Epoch[3] Validation-cross-entropy=8.844125
+2019-05-07 14:22:12,435 [INFO]  Epoch[3] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:22:19,923 [INFO]  Epoch[4] Batch [0-9486]	Speed: 20270.37 samples/sec	cross-entropy=3.531996	Promotion1-accuracy=0.000000
+2019-05-07 14:22:27,380 [INFO]  Epoch[4] Train-cross-entropy=3.444730
+2019-05-07 14:22:27,380 [INFO]  Epoch[4] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:22:27,380 [INFO]  Epoch[4] Time cost=14.945
+2019-05-07 14:22:27,382 [INFO]  Saved checkpoint to "imputer_model/model-0004.params"
+2019-05-07 14:22:27,623 [INFO]  Epoch[4] Validation-cross-entropy=8.804999
+2019-05-07 14:22:27,623 [INFO]  Epoch[4] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:22:35,050 [INFO]  Epoch[5] Batch [0-9486]	Speed: 20437.54 samples/sec	cross-entropy=3.450605	Promotion1-accuracy=0.000000
+2019-05-07 14:22:42,489 [INFO]  Epoch[5] Train-cross-entropy=3.373137
+2019-05-07 14:22:42,489 [INFO]  Epoch[5] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:22:42,490 [INFO]  Epoch[5] Time cost=14.867
+2019-05-07 14:22:42,491 [INFO]  Saved checkpoint to "imputer_model/model-0005.params"
+2019-05-07 14:22:42,720 [INFO]  Epoch[5] Validation-cross-entropy=8.544359
+2019-05-07 14:22:42,721 [INFO]  Epoch[5] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:22:50,216 [INFO]  Epoch[6] Batch [0-9486]	Speed: 20252.76 samples/sec	cross-entropy=3.388451	Promotion1-accuracy=0.000000
+2019-05-07 14:22:57,684 [INFO]  Epoch[6] Train-cross-entropy=3.320532
+2019-05-07 14:22:57,684 [INFO]  Epoch[6] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:22:57,684 [INFO]  Epoch[6] Time cost=14.964
+2019-05-07 14:22:57,686 [INFO]  Saved checkpoint to "imputer_model/model-0006.params"
+2019-05-07 14:22:57,929 [INFO]  Epoch[6] Validation-cross-entropy=8.384987
+2019-05-07 14:22:57,930 [INFO]  Epoch[6] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:23:05,456 [INFO]  Epoch[7] Batch [0-9486]	Speed: 20167.76 samples/sec	cross-entropy=3.349953	Promotion1-accuracy=0.000000
+2019-05-07 14:23:12,960 [INFO]  Epoch[7] Train-cross-entropy=3.272747
+2019-05-07 14:23:12,961 [INFO]  Epoch[7] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:23:12,961 [INFO]  Epoch[7] Time cost=15.031
+2019-05-07 14:23:12,963 [INFO]  Saved checkpoint to "imputer_model/model-0007.params"
+2019-05-07 14:23:13,203 [INFO]  Epoch[7] Validation-cross-entropy=8.516978
+2019-05-07 14:23:13,203 [INFO]  Epoch[7] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:23:20,741 [INFO]  Epoch[8] Batch [0-9486]	Speed: 20137.29 samples/sec	cross-entropy=3.304793	Promotion1-accuracy=0.000000
+2019-05-07 14:23:28,242 [INFO]  Epoch[8] Train-cross-entropy=3.238501
+2019-05-07 14:23:28,242 [INFO]  Epoch[8] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:23:28,242 [INFO]  Epoch[8] Time cost=15.039
+2019-05-07 14:23:28,244 [INFO]  Saved checkpoint to "imputer_model/model-0008.params"
+2019-05-07 14:23:28,475 [INFO]  Epoch[8] Validation-cross-entropy=8.272718
+2019-05-07 14:23:28,475 [INFO]  Epoch[8] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:23:36,023 [INFO]  Epoch[9] Batch [0-9486]	Speed: 20111.69 samples/sec	cross-entropy=3.274682	Promotion1-accuracy=0.000000
+2019-05-07 14:23:43,571 [INFO]  Epoch[9] Train-cross-entropy=3.207465
+2019-05-07 14:23:43,571 [INFO]  Epoch[9] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:23:43,571 [INFO]  Epoch[9] Time cost=15.096
+2019-05-07 14:23:43,573 [INFO]  Saved checkpoint to "imputer_model/model-0009.params"
+2019-05-07 14:23:43,819 [INFO]  Epoch[9] Validation-cross-entropy=8.331034
+2019-05-07 14:23:43,819 [INFO]  Epoch[9] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:23:43,819 [INFO]  
+========== done (152.8975009918213 s) fit model
+2019-05-07 14:23:44,392 [INFO]  Expected calibration error: 92.9%
+2019-05-07 14:23:45,047 [INFO]  Expected calibration error after calibration: 92.9%
+2019-05-07 14:23:45,643 [INFO]  save metrics in imputer_model/fit-test-metrics.json
+2019-05-07 14:23:45,643 [INFO]  Keeping imputer_model/model-0008.params
+2019-05-07 14:23:45,644 [INFO]  Deleting imputer_model/model-0001.params
+2019-05-07 14:23:45,644 [INFO]  Deleting imputer_model/model-0009.params
+2019-05-07 14:23:45,644 [INFO]  Deleting imputer_model/model-0003.params
+2019-05-07 14:23:45,645 [INFO]  Deleting imputer_model/model-0000.params
+2019-05-07 14:23:45,645 [INFO]  Deleting imputer_model/model-0004.params
+2019-05-07 14:23:45,645 [INFO]  Deleting imputer_model/model-0007.params
+2019-05-07 14:23:45,646 [INFO]  Deleting imputer_model/model-0006.params
+2019-05-07 14:23:45,646 [INFO]  Deleting imputer_model/model-0005.params
+2019-05-07 14:23:45,646 [INFO]  Deleting imputer_model/model-0002.params
+2019-05-07 14:23:45,854 [INFO]  Concatenating numeric columns ['Store', 'Dept', 'Weekly_Sales', 'Temperature', 'Fuel_Price', 'Promotion2', 'Promotion3', 'Promotion4', 'Promotion5', 'CPI', 'Unemployment'] into numerical_features-2yW4Acq9GF
+2019-05-07 14:23:45,854 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:23:45,860 [INFO]  Data Encoding - Encoded 84320 rows of column                         Store,Dept,Weekly_Sales,Temperature,Fuel_Price,Promotion2,Promotion3,Promotion4,Promotion5,CPI,Unemployment with <class 'datawig.column_encoders.NumericalEncoder'> into                         <class 'numpy.ndarray'> of shape (84320, 11)                         and then into shape (84320, 11)
+2019-05-07 14:23:45,863 [INFO]  Concatenating numeric columns ['Promotion1'] into Promotion1
+2019-05-07 14:23:45,863 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:23:45,864 [INFO]  Label Encoding - Encoded 84320 rows of column                             Promotion1 with <class 'datawig.column_encoders.NumericalEncoder'> into                             <class 'numpy.ndarray'> of shape (84320, 1) and                             then into shape (84320, 1)
+2019-05-07 14:23:47,679 [INFO]  Top-k only for CategoricalEncoder, dropping Promotion1, <class 'datawig.column_encoders.NumericalEncoder'>
+2019-05-07 14:23:47,679 [INFO]  Precision filtering only for CategoricalEncoder returning                             Promotion1 unfiltered
+2019-05-07 14:29:08,839 [INFO]  Using [[cpu(0)]] as the context for training
+2019-05-07 14:29:08,921 [INFO]  Fitting label encoder <class 'datawig.column_encoders.NumericalEncoder'> on 303530 rows                             of training data
+2019-05-07 14:29:08,937 [INFO]  Detected 0 rows with missing labels                         for column Promotion1
+2019-05-07 14:29:08,940 [INFO]  Dropping 0/303530 rows
+2019-05-07 14:29:08,956 [INFO]  Detected 21759 rows with missing labels                         for column Promotion1
+2019-05-07 14:29:08,957 [INFO]  Dropping 21759/33725 rows
+2019-05-07 14:29:08,959 [INFO]  Train: 303530, Test: 11966
+2019-05-07 14:29:08,959 [INFO]  Fitting data encoder <class 'datawig.column_encoders.NumericalEncoder'> on columns Store, Dept, Weekly_Sales, Temperature, Fuel_Price, Promotion2, Promotion3, Promotion4, Promotion5, CPI, Unemployment and 303530 rows of training data with parameters {'input_columns': ['Store', 'Dept', 'Weekly_Sales', 'Temperature', 'Fuel_Price', 'Promotion2', 'Promotion3', 'Promotion4', 'Promotion5', 'CPI', 'Unemployment'], 'output_column': 'numerical_features-2yW4Acq9GF', 'output_dim': 11, 'normalize': True, 'scaler': None}
+2019-05-07 14:29:09,104 [INFO]  Building Train Iterator with 303530 elements
+2019-05-07 14:29:09,709 [INFO]  Concatenating numeric columns ['Store', 'Dept', 'Weekly_Sales', 'Temperature', 'Fuel_Price', 'Promotion2', 'Promotion3', 'Promotion4', 'Promotion5', 'CPI', 'Unemployment'] into numerical_features-2yW4Acq9GF
+2019-05-07 14:29:09,710 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:29:09,755 [INFO]  Data Encoding - Encoded 303536 rows of column                         Store,Dept,Weekly_Sales,Temperature,Fuel_Price,Promotion2,Promotion3,Promotion4,Promotion5,CPI,Unemployment with <class 'datawig.column_encoders.NumericalEncoder'> into                         <class 'numpy.ndarray'> of shape (303536, 11)                         and then into shape (303536, 11)
+2019-05-07 14:29:09,759 [INFO]  Concatenating numeric columns ['Promotion1'] into Promotion1
+2019-05-07 14:29:09,759 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:29:09,763 [INFO]  Label Encoding - Encoded 303536 rows of column                             Promotion1 with <class 'datawig.column_encoders.NumericalEncoder'> into                             <class 'numpy.ndarray'> of shape (303536, 1) and                             then into shape (303536, 1)
+2019-05-07 14:29:09,766 [INFO]  Building Test Iterator with 11966 elements
+2019-05-07 14:29:09,800 [INFO]  Concatenating numeric columns ['Store', 'Dept', 'Weekly_Sales', 'Temperature', 'Fuel_Price', 'Promotion2', 'Promotion3', 'Promotion4', 'Promotion5', 'CPI', 'Unemployment'] into numerical_features-2yW4Acq9GF
+2019-05-07 14:29:09,800 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:29:09,802 [INFO]  Data Encoding - Encoded 11968 rows of column                         Store,Dept,Weekly_Sales,Temperature,Fuel_Price,Promotion2,Promotion3,Promotion4,Promotion5,CPI,Unemployment with <class 'datawig.column_encoders.NumericalEncoder'> into                         <class 'numpy.ndarray'> of shape (11968, 11)                         and then into shape (11968, 11)
+2019-05-07 14:29:09,804 [INFO]  Concatenating numeric columns ['Promotion1'] into Promotion1
+2019-05-07 14:29:09,804 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:29:09,806 [INFO]  Label Encoding - Encoded 11968 rows of column                             Promotion1 with <class 'datawig.column_encoders.NumericalEncoder'> into                             <class 'numpy.ndarray'> of shape (11968, 1) and                             then into shape (11968, 1)
+2019-05-07 14:29:09,815 [INFO]  Concatenating all 1 latent symbols
+2019-05-07 14:29:09,815 [INFO]  Constructing numerical loss for column Promotion1
+2019-05-07 14:29:09,816 [INFO]  Building output symbols
+2019-05-07 14:29:09,818 [INFO]  
+========== start: fit model
+2019-05-07 14:29:09,819 [WARNING]  Already bound, ignoring bind()
+2019-05-07 14:29:17,321 [INFO]  Epoch[0] Batch [0-9486]	Speed: 20248.95 samples/sec	cross-entropy=4.913774	Promotion1-accuracy=0.000000
+2019-05-07 14:29:24,944 [INFO]  Epoch[0] Train-cross-entropy=4.508455
+2019-05-07 14:29:24,944 [INFO]  Epoch[0] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:29:24,945 [INFO]  Epoch[0] Time cost=15.125
+2019-05-07 14:29:24,946 [INFO]  Saved checkpoint to "imputer_model/model-0000.params"
+2019-05-07 14:29:25,177 [INFO]  Epoch[0] Validation-cross-entropy=10.674925
+2019-05-07 14:29:25,177 [INFO]  Epoch[0] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:29:32,800 [INFO]  Epoch[1] Batch [0-9486]	Speed: 19913.05 samples/sec	cross-entropy=4.046990	Promotion1-accuracy=0.000000
+2019-05-07 14:29:40,423 [INFO]  Epoch[1] Train-cross-entropy=3.897004
+2019-05-07 14:29:40,424 [INFO]  Epoch[1] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:29:40,424 [INFO]  Epoch[1] Time cost=15.246
+2019-05-07 14:29:40,426 [INFO]  Saved checkpoint to "imputer_model/model-0001.params"
+2019-05-07 14:29:40,652 [INFO]  Epoch[1] Validation-cross-entropy=10.160733
+2019-05-07 14:29:40,652 [INFO]  Epoch[1] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:29:48,156 [INFO]  Epoch[2] Batch [0-9486]	Speed: 20228.67 samples/sec	cross-entropy=3.788398	Promotion1-accuracy=0.000000
+2019-05-07 14:29:56,035 [INFO]  Epoch[2] Train-cross-entropy=3.677049
+2019-05-07 14:29:56,035 [INFO]  Epoch[2] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:29:56,035 [INFO]  Epoch[2] Time cost=15.383
+2019-05-07 14:29:56,037 [INFO]  Saved checkpoint to "imputer_model/model-0002.params"
+2019-05-07 14:29:56,283 [INFO]  Epoch[2] Validation-cross-entropy=9.436832
+2019-05-07 14:29:56,283 [INFO]  Epoch[2] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:30:03,790 [INFO]  Epoch[3] Batch [0-9486]	Speed: 20222.32 samples/sec	cross-entropy=3.633701	Promotion1-accuracy=0.000000
+2019-05-07 14:30:11,283 [INFO]  Epoch[3] Train-cross-entropy=3.545295
+2019-05-07 14:30:11,283 [INFO]  Epoch[3] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:30:11,284 [INFO]  Epoch[3] Time cost=15.000
+2019-05-07 14:30:11,285 [INFO]  Saved checkpoint to "imputer_model/model-0003.params"
+2019-05-07 14:30:11,514 [INFO]  Epoch[3] Validation-cross-entropy=8.844125
+2019-05-07 14:30:11,514 [INFO]  Epoch[3] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:30:18,954 [INFO]  Epoch[4] Batch [0-9486]	Speed: 20402.41 samples/sec	cross-entropy=3.531996	Promotion1-accuracy=0.000000
+2019-05-07 14:30:26,356 [INFO]  Epoch[4] Train-cross-entropy=3.444730
+2019-05-07 14:30:26,356 [INFO]  Epoch[4] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:30:26,356 [INFO]  Epoch[4] Time cost=14.842
+2019-05-07 14:30:26,358 [INFO]  Saved checkpoint to "imputer_model/model-0004.params"
+2019-05-07 14:30:26,597 [INFO]  Epoch[4] Validation-cross-entropy=8.804999
+2019-05-07 14:30:26,598 [INFO]  Epoch[4] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:30:33,930 [INFO]  Epoch[5] Batch [0-9486]	Speed: 20702.39 samples/sec	cross-entropy=3.450605	Promotion1-accuracy=0.000000
+2019-05-07 14:30:41,412 [INFO]  Epoch[5] Train-cross-entropy=3.373137
+2019-05-07 14:30:41,412 [INFO]  Epoch[5] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:30:41,412 [INFO]  Epoch[5] Time cost=14.814
+2019-05-07 14:30:41,414 [INFO]  Saved checkpoint to "imputer_model/model-0005.params"
+2019-05-07 14:30:41,644 [INFO]  Epoch[5] Validation-cross-entropy=8.544359
+2019-05-07 14:30:41,644 [INFO]  Epoch[5] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:30:49,112 [INFO]  Epoch[6] Batch [0-9486]	Speed: 20326.34 samples/sec	cross-entropy=3.388451	Promotion1-accuracy=0.000000
+2019-05-07 14:30:56,563 [INFO]  Epoch[6] Train-cross-entropy=3.320532
+2019-05-07 14:30:56,563 [INFO]  Epoch[6] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:30:56,563 [INFO]  Epoch[6] Time cost=14.919
+2019-05-07 14:30:56,565 [INFO]  Saved checkpoint to "imputer_model/model-0006.params"
+2019-05-07 14:30:56,793 [INFO]  Epoch[6] Validation-cross-entropy=8.384987
+2019-05-07 14:30:56,793 [INFO]  Epoch[6] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:31:04,361 [INFO]  Epoch[7] Batch [0-9486]	Speed: 20057.80 samples/sec	cross-entropy=3.349953	Promotion1-accuracy=0.000000
+2019-05-07 14:31:11,865 [INFO]  Epoch[7] Train-cross-entropy=3.272747
+2019-05-07 14:31:11,866 [INFO]  Epoch[7] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:31:11,866 [INFO]  Epoch[7] Time cost=15.073
+2019-05-07 14:31:11,868 [INFO]  Saved checkpoint to "imputer_model/model-0007.params"
+2019-05-07 14:31:12,108 [INFO]  Epoch[7] Validation-cross-entropy=8.516978
+2019-05-07 14:31:12,108 [INFO]  Epoch[7] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:31:19,632 [INFO]  Epoch[8] Batch [0-9486]	Speed: 20174.42 samples/sec	cross-entropy=3.304793	Promotion1-accuracy=0.000000
+2019-05-07 14:31:27,130 [INFO]  Epoch[8] Train-cross-entropy=3.238501
+2019-05-07 14:31:27,130 [INFO]  Epoch[8] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:31:27,130 [INFO]  Epoch[8] Time cost=15.023
+2019-05-07 14:31:27,132 [INFO]  Saved checkpoint to "imputer_model/model-0008.params"
+2019-05-07 14:31:27,360 [INFO]  Epoch[8] Validation-cross-entropy=8.272718
+2019-05-07 14:31:27,361 [INFO]  Epoch[8] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:31:34,861 [INFO]  Epoch[9] Batch [0-9486]	Speed: 20238.27 samples/sec	cross-entropy=3.274682	Promotion1-accuracy=0.000000
+2019-05-07 14:31:42,298 [INFO]  Epoch[9] Train-cross-entropy=3.207465
+2019-05-07 14:31:42,299 [INFO]  Epoch[9] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:31:42,299 [INFO]  Epoch[9] Time cost=14.938
+2019-05-07 14:31:42,300 [INFO]  Saved checkpoint to "imputer_model/model-0009.params"
+2019-05-07 14:31:42,541 [INFO]  Epoch[9] Validation-cross-entropy=8.331034
+2019-05-07 14:31:42,541 [INFO]  Epoch[9] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:31:42,541 [INFO]  
+========== done (152.72250604629517 s) fit model
+2019-05-07 14:31:43,115 [INFO]  Expected calibration error: 92.9%
+2019-05-07 14:31:43,760 [INFO]  Expected calibration error after calibration: 92.9%
+2019-05-07 14:31:44,331 [INFO]  save metrics in imputer_model/fit-test-metrics.json
+2019-05-07 14:31:44,332 [INFO]  Keeping imputer_model/model-0008.params
+2019-05-07 14:31:44,332 [INFO]  Deleting imputer_model/model-0006.params
+2019-05-07 14:31:44,333 [INFO]  Deleting imputer_model/model-0004.params
+2019-05-07 14:31:44,333 [INFO]  Deleting imputer_model/model-0000.params
+2019-05-07 14:31:44,333 [INFO]  Deleting imputer_model/model-0002.params
+2019-05-07 14:31:44,333 [INFO]  Deleting imputer_model/model-0009.params
+2019-05-07 14:31:44,334 [INFO]  Deleting imputer_model/model-0007.params
+2019-05-07 14:31:44,334 [INFO]  Deleting imputer_model/model-0003.params
+2019-05-07 14:31:44,334 [INFO]  Deleting imputer_model/model-0005.params
+2019-05-07 14:31:44,335 [INFO]  Deleting imputer_model/model-0001.params
+2019-05-07 14:31:44,550 [INFO]  Concatenating numeric columns ['Store', 'Dept', 'Weekly_Sales', 'Temperature', 'Fuel_Price', 'Promotion2', 'Promotion3', 'Promotion4', 'Promotion5', 'CPI', 'Unemployment'] into numerical_features-2yW4Acq9GF
+2019-05-07 14:31:44,550 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:31:44,556 [INFO]  Data Encoding - Encoded 84320 rows of column                         Store,Dept,Weekly_Sales,Temperature,Fuel_Price,Promotion2,Promotion3,Promotion4,Promotion5,CPI,Unemployment with <class 'datawig.column_encoders.NumericalEncoder'> into                         <class 'numpy.ndarray'> of shape (84320, 11)                         and then into shape (84320, 11)
+2019-05-07 14:31:44,559 [INFO]  Concatenating numeric columns ['Promotion1'] into Promotion1
+2019-05-07 14:31:44,559 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:31:44,560 [INFO]  Label Encoding - Encoded 84320 rows of column                             Promotion1 with <class 'datawig.column_encoders.NumericalEncoder'> into                             <class 'numpy.ndarray'> of shape (84320, 1) and                             then into shape (84320, 1)
+2019-05-07 14:31:46,329 [INFO]  Top-k only for CategoricalEncoder, dropping Promotion1, <class 'datawig.column_encoders.NumericalEncoder'>
+2019-05-07 14:31:46,329 [INFO]  Precision filtering only for CategoricalEncoder returning                             Promotion1 unfiltered
+2019-05-07 14:35:29,126 [INFO]  Using [[cpu(0)]] as the context for training
+2019-05-07 14:35:29,212 [INFO]  Fitting label encoder <class 'datawig.column_encoders.NumericalEncoder'> on 303530 rows                             of training data
+2019-05-07 14:35:29,228 [INFO]  Detected 0 rows with missing labels                         for column Promotion1
+2019-05-07 14:35:29,231 [INFO]  Dropping 0/303530 rows
+2019-05-07 14:35:29,247 [INFO]  Detected 21759 rows with missing labels                         for column Promotion1
+2019-05-07 14:35:29,248 [INFO]  Dropping 21759/33725 rows
+2019-05-07 14:35:29,250 [INFO]  Train: 303530, Test: 11966
+2019-05-07 14:35:29,251 [INFO]  Fitting data encoder <class 'datawig.column_encoders.NumericalEncoder'> on columns Weekly_Sales, Temperature, Fuel_Price, Promotion2, Promotion3, Promotion4, Promotion5, CPI and 303530 rows of training data with parameters {'input_columns': ['Weekly_Sales', 'Temperature', 'Fuel_Price', 'Promotion2', 'Promotion3', 'Promotion4', 'Promotion5', 'CPI'], 'output_column': 'numerical_features-2yW4Acq9GF', 'output_dim': 8, 'normalize': True, 'scaler': None}
+2019-05-07 14:35:29,354 [INFO]  Building Train Iterator with 303530 elements
+2019-05-07 14:35:30,039 [INFO]  Concatenating numeric columns ['Weekly_Sales', 'Temperature', 'Fuel_Price', 'Promotion2', 'Promotion3', 'Promotion4', 'Promotion5', 'CPI'] into numerical_features-2yW4Acq9GF
+2019-05-07 14:35:30,039 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:35:30,068 [INFO]  Data Encoding - Encoded 303536 rows of column                         Weekly_Sales,Temperature,Fuel_Price,Promotion2,Promotion3,Promotion4,Promotion5,CPI with <class 'datawig.column_encoders.NumericalEncoder'> into                         <class 'numpy.ndarray'> of shape (303536, 8)                         and then into shape (303536, 8)
+2019-05-07 14:35:30,071 [INFO]  Concatenating numeric columns ['Promotion1'] into Promotion1
+2019-05-07 14:35:30,071 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:35:30,075 [INFO]  Label Encoding - Encoded 303536 rows of column                             Promotion1 with <class 'datawig.column_encoders.NumericalEncoder'> into                             <class 'numpy.ndarray'> of shape (303536, 1) and                             then into shape (303536, 1)
+2019-05-07 14:35:30,078 [INFO]  Building Test Iterator with 11966 elements
+2019-05-07 14:35:30,113 [INFO]  Concatenating numeric columns ['Weekly_Sales', 'Temperature', 'Fuel_Price', 'Promotion2', 'Promotion3', 'Promotion4', 'Promotion5', 'CPI'] into numerical_features-2yW4Acq9GF
+2019-05-07 14:35:30,113 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:35:30,115 [INFO]  Data Encoding - Encoded 11968 rows of column                         Weekly_Sales,Temperature,Fuel_Price,Promotion2,Promotion3,Promotion4,Promotion5,CPI with <class 'datawig.column_encoders.NumericalEncoder'> into                         <class 'numpy.ndarray'> of shape (11968, 8)                         and then into shape (11968, 8)
+2019-05-07 14:35:30,117 [INFO]  Concatenating numeric columns ['Promotion1'] into Promotion1
+2019-05-07 14:35:30,117 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:35:30,119 [INFO]  Label Encoding - Encoded 11968 rows of column                             Promotion1 with <class 'datawig.column_encoders.NumericalEncoder'> into                             <class 'numpy.ndarray'> of shape (11968, 1) and                             then into shape (11968, 1)
+2019-05-07 14:35:30,124 [INFO]  Concatenating all 1 latent symbols
+2019-05-07 14:35:30,125 [INFO]  Constructing numerical loss for column Promotion1
+2019-05-07 14:35:30,125 [INFO]  Building output symbols
+2019-05-07 14:35:30,128 [INFO]  
+========== start: fit model
+2019-05-07 14:35:30,128 [WARNING]  Already bound, ignoring bind()
+2019-05-07 14:35:38,114 [INFO]  Epoch[0] Batch [0-9486]	Speed: 19019.77 samples/sec	cross-entropy=5.079697	Promotion1-accuracy=0.000000
+2019-05-07 14:35:45,811 [INFO]  Epoch[0] Train-cross-entropy=4.672415
+2019-05-07 14:35:45,811 [INFO]  Epoch[0] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:35:45,811 [INFO]  Epoch[0] Time cost=15.681
+2019-05-07 14:35:45,812 [INFO]  Saved checkpoint to "imputer_model/model-0000.params"
+2019-05-07 14:35:46,041 [INFO]  Epoch[0] Validation-cross-entropy=11.159599
+2019-05-07 14:35:46,041 [INFO]  Epoch[0] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:35:53,670 [INFO]  Epoch[1] Batch [0-9486]	Speed: 19897.90 samples/sec	cross-entropy=4.251766	Promotion1-accuracy=0.000000
+2019-05-07 14:36:01,532 [INFO]  Epoch[1] Train-cross-entropy=4.125200
+2019-05-07 14:36:01,532 [INFO]  Epoch[1] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:36:01,532 [INFO]  Epoch[1] Time cost=15.491
+2019-05-07 14:36:01,534 [INFO]  Saved checkpoint to "imputer_model/model-0001.params"
+2019-05-07 14:36:01,762 [INFO]  Epoch[1] Validation-cross-entropy=10.736740
+2019-05-07 14:36:01,763 [INFO]  Epoch[1] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:36:09,600 [INFO]  Epoch[2] Batch [0-9486]	Speed: 19367.31 samples/sec	cross-entropy=4.082462	Promotion1-accuracy=0.000000
+2019-05-07 14:36:17,368 [INFO]  Epoch[2] Train-cross-entropy=3.955940
+2019-05-07 14:36:17,368 [INFO]  Epoch[2] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:36:17,368 [INFO]  Epoch[2] Time cost=15.605
+2019-05-07 14:36:17,370 [INFO]  Saved checkpoint to "imputer_model/model-0002.params"
+2019-05-07 14:36:17,602 [INFO]  Epoch[2] Validation-cross-entropy=10.111197
+2019-05-07 14:36:17,602 [INFO]  Epoch[2] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:36:25,012 [INFO]  Epoch[3] Batch [0-9486]	Speed: 20485.39 samples/sec	cross-entropy=3.902977	Promotion1-accuracy=0.000000
+2019-05-07 14:36:32,733 [INFO]  Epoch[3] Train-cross-entropy=3.801030
+2019-05-07 14:36:32,733 [INFO]  Epoch[3] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:36:32,733 [INFO]  Epoch[3] Time cost=15.131
+2019-05-07 14:36:32,735 [INFO]  Saved checkpoint to "imputer_model/model-0003.params"
+2019-05-07 14:36:32,975 [INFO]  Epoch[3] Validation-cross-entropy=9.933211
+2019-05-07 14:36:32,976 [INFO]  Epoch[3] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:36:40,334 [INFO]  Epoch[4] Batch [0-9486]	Speed: 20629.70 samples/sec	cross-entropy=3.801809	Promotion1-accuracy=0.000000
+2019-05-07 14:36:47,813 [INFO]  Epoch[4] Train-cross-entropy=3.714921
+2019-05-07 14:36:47,813 [INFO]  Epoch[4] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:36:47,814 [INFO]  Epoch[4] Time cost=14.838
+2019-05-07 14:36:47,815 [INFO]  Saved checkpoint to "imputer_model/model-0004.params"
+2019-05-07 14:36:48,042 [INFO]  Epoch[4] Validation-cross-entropy=9.784401
+2019-05-07 14:36:48,042 [INFO]  Epoch[4] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:36:55,462 [INFO]  Epoch[5] Batch [0-9486]	Speed: 20459.31 samples/sec	cross-entropy=3.747619	Promotion1-accuracy=0.000000
+2019-05-07 14:37:02,718 [INFO]  Epoch[5] Train-cross-entropy=3.676693
+2019-05-07 14:37:02,718 [INFO]  Epoch[5] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:37:02,718 [INFO]  Epoch[5] Time cost=14.676
+2019-05-07 14:37:02,720 [INFO]  Saved checkpoint to "imputer_model/model-0005.params"
+2019-05-07 14:37:02,967 [INFO]  Epoch[5] Validation-cross-entropy=9.456019
+2019-05-07 14:37:02,967 [INFO]  Epoch[5] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:37:10,300 [INFO]  Epoch[6] Batch [0-9486]	Speed: 20699.05 samples/sec	cross-entropy=3.721323	Promotion1-accuracy=0.000000
+2019-05-07 14:37:17,521 [INFO]  Epoch[6] Train-cross-entropy=3.645885
+2019-05-07 14:37:17,521 [INFO]  Epoch[6] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:37:17,521 [INFO]  Epoch[6] Time cost=14.554
+2019-05-07 14:37:17,523 [INFO]  Saved checkpoint to "imputer_model/model-0006.params"
+2019-05-07 14:37:17,749 [INFO]  Epoch[6] Validation-cross-entropy=9.311863
+2019-05-07 14:37:17,749 [INFO]  Epoch[6] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:37:25,069 [INFO]  Epoch[7] Batch [0-9486]	Speed: 20737.94 samples/sec	cross-entropy=3.685206	Promotion1-accuracy=0.000000
+2019-05-07 14:37:32,302 [INFO]  Epoch[7] Train-cross-entropy=3.617017
+2019-05-07 14:37:32,302 [INFO]  Epoch[7] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:37:32,302 [INFO]  Epoch[7] Time cost=14.553
+2019-05-07 14:37:32,304 [INFO]  Saved checkpoint to "imputer_model/model-0007.params"
+2019-05-07 14:37:32,547 [INFO]  Epoch[7] Validation-cross-entropy=9.364895
+2019-05-07 14:37:32,547 [INFO]  Epoch[7] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:37:39,882 [INFO]  Epoch[8] Batch [0-9486]	Speed: 20696.51 samples/sec	cross-entropy=3.654465	Promotion1-accuracy=0.000000
+2019-05-07 14:37:47,116 [INFO]  Epoch[8] Train-cross-entropy=3.585408
+2019-05-07 14:37:47,116 [INFO]  Epoch[8] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:37:47,117 [INFO]  Epoch[8] Time cost=14.569
+2019-05-07 14:37:47,118 [INFO]  Saved checkpoint to "imputer_model/model-0008.params"
+2019-05-07 14:37:47,351 [INFO]  Epoch[8] Validation-cross-entropy=9.335467
+2019-05-07 14:37:47,351 [INFO]  Epoch[8] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:37:54,677 [INFO]  Epoch[9] Batch [0-9486]	Speed: 20719.91 samples/sec	cross-entropy=3.626540	Promotion1-accuracy=0.000000
+2019-05-07 14:38:01,971 [INFO]  Epoch[9] Train-cross-entropy=3.559044
+2019-05-07 14:38:01,971 [INFO]  Epoch[9] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:38:01,971 [INFO]  Epoch[9] Time cost=14.620
+2019-05-07 14:38:01,973 [INFO]  Saved checkpoint to "imputer_model/model-0009.params"
+2019-05-07 14:38:02,213 [INFO]  Epoch[9] Validation-cross-entropy=9.210750
+2019-05-07 14:38:02,213 [INFO]  Epoch[9] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:38:02,213 [INFO]  
+========== done (152.08478903770447 s) fit model
+2019-05-07 14:38:02,812 [INFO]  Expected calibration error: 97.4%
+2019-05-07 14:38:03,463 [INFO]  Expected calibration error after calibration: 97.4%
+2019-05-07 14:38:04,020 [INFO]  save metrics in imputer_model/fit-test-metrics.json
+2019-05-07 14:38:04,027 [INFO]  Keeping imputer_model/model-0009.params
+2019-05-07 14:38:04,028 [INFO]  Deleting imputer_model/model-0001.params
+2019-05-07 14:38:04,028 [INFO]  Deleting imputer_model/model-0008.params
+2019-05-07 14:38:04,029 [INFO]  Deleting imputer_model/model-0007.params
+2019-05-07 14:38:04,029 [INFO]  Deleting imputer_model/model-0006.params
+2019-05-07 14:38:04,029 [INFO]  Deleting imputer_model/model-0003.params
+2019-05-07 14:38:04,030 [INFO]  Deleting imputer_model/model-0002.params
+2019-05-07 14:38:04,030 [INFO]  Deleting imputer_model/model-0005.params
+2019-05-07 14:38:04,030 [INFO]  Deleting imputer_model/model-0000.params
+2019-05-07 14:38:04,030 [INFO]  Deleting imputer_model/model-0004.params
+2019-05-07 14:38:04,239 [INFO]  Concatenating numeric columns ['Weekly_Sales', 'Temperature', 'Fuel_Price', 'Promotion2', 'Promotion3', 'Promotion4', 'Promotion5', 'CPI'] into numerical_features-2yW4Acq9GF
+2019-05-07 14:38:04,240 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:38:04,249 [INFO]  Data Encoding - Encoded 84320 rows of column                         Weekly_Sales,Temperature,Fuel_Price,Promotion2,Promotion3,Promotion4,Promotion5,CPI with <class 'datawig.column_encoders.NumericalEncoder'> into                         <class 'numpy.ndarray'> of shape (84320, 8)                         and then into shape (84320, 8)
+2019-05-07 14:38:04,252 [INFO]  Concatenating numeric columns ['Promotion1'] into Promotion1
+2019-05-07 14:38:04,252 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:38:04,253 [INFO]  Label Encoding - Encoded 84320 rows of column                             Promotion1 with <class 'datawig.column_encoders.NumericalEncoder'> into                             <class 'numpy.ndarray'> of shape (84320, 1) and                             then into shape (84320, 1)
+2019-05-07 14:38:06,039 [INFO]  Top-k only for CategoricalEncoder, dropping Promotion1, <class 'datawig.column_encoders.NumericalEncoder'>
+2019-05-07 14:38:06,039 [INFO]  Precision filtering only for CategoricalEncoder returning                             Promotion1 unfiltered
+2019-05-07 14:39:10,901 [INFO]  Using [[cpu(0)]] as the context for training
+2019-05-07 14:39:10,986 [INFO]  Fitting label encoder <class 'datawig.column_encoders.NumericalEncoder'> on 303530 rows                             of training data
+2019-05-07 14:39:11,002 [INFO]  Detected 0 rows with missing labels                         for column Promotion1
+2019-05-07 14:39:11,005 [INFO]  Dropping 0/303530 rows
+2019-05-07 14:39:11,022 [INFO]  Detected 21759 rows with missing labels                         for column Promotion1
+2019-05-07 14:39:11,023 [INFO]  Dropping 21759/33725 rows
+2019-05-07 14:39:11,025 [INFO]  Train: 303530, Test: 11966
+2019-05-07 14:39:11,025 [INFO]  Fitting data encoder <class 'datawig.column_encoders.NumericalEncoder'> on columns Weekly_Sales, Temperature, Fuel_Price, Promotion2, Promotion3, Promotion4, Promotion5, CPI and 303530 rows of training data with parameters {'input_columns': ['Weekly_Sales', 'Temperature', 'Fuel_Price', 'Promotion2', 'Promotion3', 'Promotion4', 'Promotion5', 'CPI'], 'output_column': 'numerical_features-2yW4Acq9GF', 'output_dim': 8, 'normalize': True, 'scaler': None}
+2019-05-07 14:39:11,123 [INFO]  Building Train Iterator with 303530 elements
+2019-05-07 14:39:11,751 [INFO]  Concatenating numeric columns ['Weekly_Sales', 'Temperature', 'Fuel_Price', 'Promotion2', 'Promotion3', 'Promotion4', 'Promotion5', 'CPI'] into numerical_features-2yW4Acq9GF
+2019-05-07 14:39:11,752 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:39:11,776 [INFO]  Data Encoding - Encoded 303536 rows of column                         Weekly_Sales,Temperature,Fuel_Price,Promotion2,Promotion3,Promotion4,Promotion5,CPI with <class 'datawig.column_encoders.NumericalEncoder'> into                         <class 'numpy.ndarray'> of shape (303536, 8)                         and then into shape (303536, 8)
+2019-05-07 14:39:11,779 [INFO]  Concatenating numeric columns ['Promotion1'] into Promotion1
+2019-05-07 14:39:11,780 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:39:11,782 [INFO]  Label Encoding - Encoded 303536 rows of column                             Promotion1 with <class 'datawig.column_encoders.NumericalEncoder'> into                             <class 'numpy.ndarray'> of shape (303536, 1) and                             then into shape (303536, 1)
+2019-05-07 14:39:11,785 [INFO]  Building Test Iterator with 11966 elements
+2019-05-07 14:39:11,819 [INFO]  Concatenating numeric columns ['Weekly_Sales', 'Temperature', 'Fuel_Price', 'Promotion2', 'Promotion3', 'Promotion4', 'Promotion5', 'CPI'] into numerical_features-2yW4Acq9GF
+2019-05-07 14:39:11,819 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:39:11,820 [INFO]  Data Encoding - Encoded 11968 rows of column                         Weekly_Sales,Temperature,Fuel_Price,Promotion2,Promotion3,Promotion4,Promotion5,CPI with <class 'datawig.column_encoders.NumericalEncoder'> into                         <class 'numpy.ndarray'> of shape (11968, 8)                         and then into shape (11968, 8)
+2019-05-07 14:39:11,822 [INFO]  Concatenating numeric columns ['Promotion1'] into Promotion1
+2019-05-07 14:39:11,822 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:39:11,823 [INFO]  Label Encoding - Encoded 11968 rows of column                             Promotion1 with <class 'datawig.column_encoders.NumericalEncoder'> into                             <class 'numpy.ndarray'> of shape (11968, 1) and                             then into shape (11968, 1)
+2019-05-07 14:39:11,829 [INFO]  Concatenating all 1 latent symbols
+2019-05-07 14:39:11,829 [INFO]  Constructing numerical loss for column Promotion1
+2019-05-07 14:39:11,830 [INFO]  Building output symbols
+2019-05-07 14:39:11,833 [INFO]  
+========== start: fit model
+2019-05-07 14:39:11,833 [WARNING]  Already bound, ignoring bind()
+2019-05-07 14:39:19,320 [INFO]  Epoch[0] Batch [0-9486]	Speed: 20283.66 samples/sec	cross-entropy=5.079697	Promotion1-accuracy=0.000000
+2019-05-07 14:39:26,786 [INFO]  Epoch[0] Train-cross-entropy=4.672415
+2019-05-07 14:39:26,786 [INFO]  Epoch[0] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:39:26,786 [INFO]  Epoch[0] Time cost=14.953
+2019-05-07 14:39:26,788 [INFO]  Saved checkpoint to "imputer_model/model-0000.params"
+2019-05-07 14:39:27,014 [INFO]  Epoch[0] Validation-cross-entropy=11.159599
+2019-05-07 14:39:27,014 [INFO]  Epoch[0] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:39:34,451 [INFO]  Epoch[1] Batch [0-9486]	Speed: 20412.19 samples/sec	cross-entropy=4.251766	Promotion1-accuracy=0.000000
+2019-05-07 14:39:41,927 [INFO]  Epoch[1] Train-cross-entropy=4.125200
+2019-05-07 14:39:41,928 [INFO]  Epoch[1] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:39:41,928 [INFO]  Epoch[1] Time cost=14.913
+2019-05-07 14:39:41,930 [INFO]  Saved checkpoint to "imputer_model/model-0001.params"
+2019-05-07 14:39:42,172 [INFO]  Epoch[1] Validation-cross-entropy=10.736740
+2019-05-07 14:39:42,172 [INFO]  Epoch[1] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:39:49,536 [INFO]  Epoch[2] Batch [0-9486]	Speed: 20612.87 samples/sec	cross-entropy=4.082462	Promotion1-accuracy=0.000000
+2019-05-07 14:39:56,908 [INFO]  Epoch[2] Train-cross-entropy=3.955940
+2019-05-07 14:39:56,909 [INFO]  Epoch[2] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:39:56,909 [INFO]  Epoch[2] Time cost=14.736
+2019-05-07 14:39:56,910 [INFO]  Saved checkpoint to "imputer_model/model-0002.params"
+2019-05-07 14:39:57,136 [INFO]  Epoch[2] Validation-cross-entropy=10.111197
+2019-05-07 14:39:57,136 [INFO]  Epoch[2] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:40:04,533 [INFO]  Epoch[3] Batch [0-9486]	Speed: 20522.97 samples/sec	cross-entropy=3.902977	Promotion1-accuracy=0.000000
+2019-05-07 14:40:11,976 [INFO]  Epoch[3] Train-cross-entropy=3.801030
+2019-05-07 14:40:11,976 [INFO]  Epoch[3] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:40:11,976 [INFO]  Epoch[3] Time cost=14.841
+2019-05-07 14:40:11,978 [INFO]  Saved checkpoint to "imputer_model/model-0003.params"
+2019-05-07 14:40:12,223 [INFO]  Epoch[3] Validation-cross-entropy=9.933211
+2019-05-07 14:40:12,223 [INFO]  Epoch[3] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:40:19,625 [INFO]  Epoch[4] Batch [0-9486]	Speed: 20507.72 samples/sec	cross-entropy=3.801809	Promotion1-accuracy=0.000000
+2019-05-07 14:40:27,115 [INFO]  Epoch[4] Train-cross-entropy=3.714921
+2019-05-07 14:40:27,116 [INFO]  Epoch[4] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:40:27,116 [INFO]  Epoch[4] Time cost=14.892
+2019-05-07 14:40:27,118 [INFO]  Saved checkpoint to "imputer_model/model-0004.params"
+2019-05-07 14:40:27,349 [INFO]  Epoch[4] Validation-cross-entropy=9.784401
+2019-05-07 14:40:27,349 [INFO]  Epoch[4] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:40:34,870 [INFO]  Epoch[5] Batch [0-9486]	Speed: 20184.55 samples/sec	cross-entropy=3.747619	Promotion1-accuracy=0.000000
+2019-05-07 14:40:42,222 [INFO]  Epoch[5] Train-cross-entropy=3.676693
+2019-05-07 14:40:42,222 [INFO]  Epoch[5] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:40:42,222 [INFO]  Epoch[5] Time cost=14.873
+2019-05-07 14:40:42,224 [INFO]  Saved checkpoint to "imputer_model/model-0005.params"
+2019-05-07 14:40:42,453 [INFO]  Epoch[5] Validation-cross-entropy=9.456019
+2019-05-07 14:40:42,453 [INFO]  Epoch[5] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:40:49,867 [INFO]  Epoch[6] Batch [0-9486]	Speed: 20472.76 samples/sec	cross-entropy=3.721323	Promotion1-accuracy=0.000000
+2019-05-07 14:40:57,279 [INFO]  Epoch[6] Train-cross-entropy=3.645885
+2019-05-07 14:40:57,279 [INFO]  Epoch[6] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:40:57,279 [INFO]  Epoch[6] Time cost=14.826
+2019-05-07 14:40:57,281 [INFO]  Saved checkpoint to "imputer_model/model-0006.params"
+2019-05-07 14:40:57,510 [INFO]  Epoch[6] Validation-cross-entropy=9.311863
+2019-05-07 14:40:57,510 [INFO]  Epoch[6] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:41:04,916 [INFO]  Epoch[7] Batch [0-9486]	Speed: 20497.14 samples/sec	cross-entropy=3.685206	Promotion1-accuracy=0.000000
+2019-05-07 14:41:12,314 [INFO]  Epoch[7] Train-cross-entropy=3.617017
+2019-05-07 14:41:12,314 [INFO]  Epoch[7] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:41:12,314 [INFO]  Epoch[7] Time cost=14.804
+2019-05-07 14:41:12,315 [INFO]  Saved checkpoint to "imputer_model/model-0007.params"
+2019-05-07 14:41:12,554 [INFO]  Epoch[7] Validation-cross-entropy=9.364895
+2019-05-07 14:41:12,554 [INFO]  Epoch[7] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:41:19,918 [INFO]  Epoch[8] Batch [0-9486]	Speed: 20612.88 samples/sec	cross-entropy=3.654465	Promotion1-accuracy=0.000000
+2019-05-07 14:41:27,280 [INFO]  Epoch[8] Train-cross-entropy=3.585408
+2019-05-07 14:41:27,280 [INFO]  Epoch[8] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:41:27,280 [INFO]  Epoch[8] Time cost=14.726
+2019-05-07 14:41:27,282 [INFO]  Saved checkpoint to "imputer_model/model-0008.params"
+2019-05-07 14:41:27,524 [INFO]  Epoch[8] Validation-cross-entropy=9.335467
+2019-05-07 14:41:27,524 [INFO]  Epoch[8] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:41:34,924 [INFO]  Epoch[9] Batch [0-9486]	Speed: 20514.28 samples/sec	cross-entropy=3.626540	Promotion1-accuracy=0.000000
+2019-05-07 14:41:42,262 [INFO]  Epoch[9] Train-cross-entropy=3.559044
+2019-05-07 14:41:42,263 [INFO]  Epoch[9] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:41:42,264 [INFO]  Epoch[9] Time cost=14.739
+2019-05-07 14:41:42,266 [INFO]  Saved checkpoint to "imputer_model/model-0009.params"
+2019-05-07 14:41:42,506 [INFO]  Epoch[9] Validation-cross-entropy=9.210750
+2019-05-07 14:41:42,507 [INFO]  Epoch[9] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:41:49,843 [INFO]  Epoch[10] Batch [0-9486]	Speed: 20691.85 samples/sec	cross-entropy=3.603998	Promotion1-accuracy=0.000000
+2019-05-07 14:41:57,157 [INFO]  Epoch[10] Train-cross-entropy=3.534874
+2019-05-07 14:41:57,157 [INFO]  Epoch[10] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:41:57,157 [INFO]  Epoch[10] Time cost=14.650
+2019-05-07 14:41:57,159 [INFO]  Saved checkpoint to "imputer_model/model-0010.params"
+2019-05-07 14:41:57,391 [INFO]  Epoch[10] Validation-cross-entropy=9.257288
+2019-05-07 14:41:57,391 [INFO]  Epoch[10] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:42:04,769 [INFO]  Epoch[11] Batch [0-9486]	Speed: 20575.03 samples/sec	cross-entropy=3.565337	Promotion1-accuracy=0.000000
+2019-05-07 14:42:12,136 [INFO]  Epoch[11] Train-cross-entropy=3.501101
+2019-05-07 14:42:12,137 [INFO]  Epoch[11] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:42:12,137 [INFO]  Epoch[11] Time cost=14.745
+2019-05-07 14:42:12,139 [INFO]  Saved checkpoint to "imputer_model/model-0011.params"
+2019-05-07 14:42:12,382 [INFO]  Epoch[11] Validation-cross-entropy=9.092818
+2019-05-07 14:42:12,382 [INFO]  Epoch[11] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:42:19,701 [INFO]  Epoch[12] Batch [0-9486]	Speed: 20741.64 samples/sec	cross-entropy=3.546516	Promotion1-accuracy=0.000000
+2019-05-07 14:42:27,070 [INFO]  Epoch[12] Train-cross-entropy=3.483992
+2019-05-07 14:42:27,070 [INFO]  Epoch[12] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:42:27,070 [INFO]  Epoch[12] Time cost=14.688
+2019-05-07 14:42:27,072 [INFO]  Saved checkpoint to "imputer_model/model-0012.params"
+2019-05-07 14:42:27,313 [INFO]  Epoch[12] Validation-cross-entropy=9.043153
+2019-05-07 14:42:27,313 [INFO]  Epoch[12] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:42:34,626 [INFO]  Epoch[13] Batch [0-9486]	Speed: 20758.73 samples/sec	cross-entropy=3.515959	Promotion1-accuracy=0.000000
+2019-05-07 14:42:41,965 [INFO]  Epoch[13] Train-cross-entropy=3.455516
+2019-05-07 14:42:41,967 [INFO]  Epoch[13] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:42:41,967 [INFO]  Epoch[13] Time cost=14.653
+2019-05-07 14:42:41,968 [INFO]  Saved checkpoint to "imputer_model/model-0013.params"
+2019-05-07 14:42:42,209 [INFO]  Epoch[13] Validation-cross-entropy=8.880119
+2019-05-07 14:42:42,209 [INFO]  Epoch[13] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:42:49,523 [INFO]  Epoch[14] Batch [0-9486]	Speed: 20754.17 samples/sec	cross-entropy=3.497544	Promotion1-accuracy=0.000000
+2019-05-07 14:42:56,911 [INFO]  Epoch[14] Train-cross-entropy=3.445205
+2019-05-07 14:42:56,911 [INFO]  Epoch[14] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:42:56,911 [INFO]  Epoch[14] Time cost=14.702
+2019-05-07 14:42:56,913 [INFO]  Saved checkpoint to "imputer_model/model-0014.params"
+2019-05-07 14:42:57,145 [INFO]  Epoch[14] Validation-cross-entropy=8.938867
+2019-05-07 14:42:57,145 [INFO]  Epoch[14] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:43:04,495 [INFO]  Epoch[15] Batch [0-9486]	Speed: 20654.37 samples/sec	cross-entropy=3.478578	Promotion1-accuracy=0.000000
+2019-05-07 14:43:11,891 [INFO]  Epoch[15] Train-cross-entropy=3.425290
+2019-05-07 14:43:11,892 [INFO]  Epoch[15] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:43:11,892 [INFO]  Epoch[15] Time cost=14.747
+2019-05-07 14:43:11,894 [INFO]  Saved checkpoint to "imputer_model/model-0015.params"
+2019-05-07 14:43:12,137 [INFO]  Epoch[15] Validation-cross-entropy=8.857998
+2019-05-07 14:43:12,138 [INFO]  Epoch[15] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:43:19,477 [INFO]  Epoch[16] Batch [0-9486]	Speed: 20682.99 samples/sec	cross-entropy=3.472457	Promotion1-accuracy=0.000000
+2019-05-07 14:43:26,827 [INFO]  Epoch[16] Train-cross-entropy=3.422310
+2019-05-07 14:43:26,827 [INFO]  Epoch[16] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:43:26,827 [INFO]  Epoch[16] Time cost=14.689
+2019-05-07 14:43:26,829 [INFO]  Saved checkpoint to "imputer_model/model-0016.params"
+2019-05-07 14:43:27,060 [INFO]  Epoch[16] Validation-cross-entropy=8.852682
+2019-05-07 14:43:27,060 [INFO]  Epoch[16] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:43:34,417 [INFO]  Epoch[17] Batch [0-9486]	Speed: 20632.66 samples/sec	cross-entropy=3.470973	Promotion1-accuracy=0.000000
+2019-05-07 14:43:41,734 [INFO]  Epoch[17] Train-cross-entropy=3.418999
+2019-05-07 14:43:41,735 [INFO]  Epoch[17] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:43:41,736 [INFO]  Epoch[17] Time cost=14.676
+2019-05-07 14:43:41,738 [INFO]  Saved checkpoint to "imputer_model/model-0017.params"
+2019-05-07 14:43:41,983 [INFO]  Epoch[17] Validation-cross-entropy=8.792788
+2019-05-07 14:43:41,983 [INFO]  Epoch[17] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:43:49,398 [INFO]  Epoch[18] Batch [0-9486]	Speed: 20473.32 samples/sec	cross-entropy=3.460549	Promotion1-accuracy=0.000000
+2019-05-07 14:43:56,771 [INFO]  Epoch[18] Train-cross-entropy=3.408496
+2019-05-07 14:43:56,771 [INFO]  Epoch[18] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:43:56,771 [INFO]  Epoch[18] Time cost=14.788
+2019-05-07 14:43:56,773 [INFO]  Saved checkpoint to "imputer_model/model-0018.params"
+2019-05-07 14:43:56,999 [INFO]  Epoch[18] Validation-cross-entropy=8.788988
+2019-05-07 14:43:56,999 [INFO]  Epoch[18] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:44:04,356 [INFO]  Epoch[19] Batch [0-9486]	Speed: 20634.66 samples/sec	cross-entropy=3.452853	Promotion1-accuracy=0.000000
+2019-05-07 14:44:11,708 [INFO]  Epoch[19] Train-cross-entropy=3.398291
+2019-05-07 14:44:11,709 [INFO]  Epoch[19] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:44:11,709 [INFO]  Epoch[19] Time cost=14.710
+2019-05-07 14:44:11,711 [INFO]  Saved checkpoint to "imputer_model/model-0019.params"
+2019-05-07 14:44:11,953 [INFO]  Epoch[19] Validation-cross-entropy=8.937617
+2019-05-07 14:44:11,954 [INFO]  Epoch[19] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:44:19,326 [INFO]  Epoch[20] Batch [0-9486]	Speed: 20589.87 samples/sec	cross-entropy=3.449663	Promotion1-accuracy=0.000000
+2019-05-07 14:44:26,677 [INFO]  Epoch[20] Train-cross-entropy=3.391612
+2019-05-07 14:44:26,677 [INFO]  Epoch[20] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:44:26,677 [INFO]  Epoch[20] Time cost=14.723
+2019-05-07 14:44:26,679 [INFO]  Saved checkpoint to "imputer_model/model-0020.params"
+2019-05-07 14:44:26,906 [INFO]  No improvement detected for 3 epochs compared to 8.79278781898519 last error obtained: 9.166518398306586, stopping here
+2019-05-07 14:44:26,906 [INFO]  Stopping training, patience reached
+2019-05-07 14:44:26,906 [INFO]  
+========== done (315.07389307022095 s) fit model
+2019-05-07 14:44:27,524 [INFO]  Expected calibration error: 97.2%
+2019-05-07 14:44:28,168 [INFO]  Expected calibration error after calibration: 97.2%
+2019-05-07 14:44:28,715 [INFO]  save metrics in imputer_model/fit-test-metrics.json
+2019-05-07 14:44:28,716 [INFO]  Keeping imputer_model/model-0018.params
+2019-05-07 14:44:28,716 [INFO]  Deleting imputer_model/model-0013.params
+2019-05-07 14:44:28,717 [INFO]  Deleting imputer_model/model-0001.params
+2019-05-07 14:44:28,717 [INFO]  Deleting imputer_model/model-0016.params
+2019-05-07 14:44:28,717 [INFO]  Deleting imputer_model/model-0007.params
+2019-05-07 14:44:28,718 [INFO]  Deleting imputer_model/model-0003.params
+2019-05-07 14:44:28,718 [INFO]  Deleting imputer_model/model-0015.params
+2019-05-07 14:44:28,718 [INFO]  Deleting imputer_model/model-0011.params
+2019-05-07 14:44:28,719 [INFO]  Deleting imputer_model/model-0009.params
+2019-05-07 14:44:28,719 [INFO]  Deleting imputer_model/model-0020.params
+2019-05-07 14:44:28,719 [INFO]  Deleting imputer_model/model-0008.params
+2019-05-07 14:44:28,720 [INFO]  Deleting imputer_model/model-0019.params
+2019-05-07 14:44:28,720 [INFO]  Deleting imputer_model/model-0017.params
+2019-05-07 14:44:28,720 [INFO]  Deleting imputer_model/model-0002.params
+2019-05-07 14:44:28,721 [INFO]  Deleting imputer_model/model-0014.params
+2019-05-07 14:44:28,721 [INFO]  Deleting imputer_model/model-0004.params
+2019-05-07 14:44:28,721 [INFO]  Deleting imputer_model/model-0000.params
+2019-05-07 14:44:28,722 [INFO]  Deleting imputer_model/model-0005.params
+2019-05-07 14:44:28,722 [INFO]  Deleting imputer_model/model-0012.params
+2019-05-07 14:44:28,722 [INFO]  Deleting imputer_model/model-0010.params
+2019-05-07 14:44:28,722 [INFO]  Deleting imputer_model/model-0006.params
+2019-05-07 14:44:28,941 [INFO]  Concatenating numeric columns ['Weekly_Sales', 'Temperature', 'Fuel_Price', 'Promotion2', 'Promotion3', 'Promotion4', 'Promotion5', 'CPI'] into numerical_features-2yW4Acq9GF
+2019-05-07 14:44:28,941 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:44:28,947 [INFO]  Data Encoding - Encoded 84320 rows of column                         Weekly_Sales,Temperature,Fuel_Price,Promotion2,Promotion3,Promotion4,Promotion5,CPI with <class 'datawig.column_encoders.NumericalEncoder'> into                         <class 'numpy.ndarray'> of shape (84320, 8)                         and then into shape (84320, 8)
+2019-05-07 14:44:28,949 [INFO]  Concatenating numeric columns ['Promotion1'] into Promotion1
+2019-05-07 14:44:28,949 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:44:28,951 [INFO]  Label Encoding - Encoded 84320 rows of column                             Promotion1 with <class 'datawig.column_encoders.NumericalEncoder'> into                             <class 'numpy.ndarray'> of shape (84320, 1) and                             then into shape (84320, 1)
+2019-05-07 14:44:30,738 [INFO]  Top-k only for CategoricalEncoder, dropping Promotion1, <class 'datawig.column_encoders.NumericalEncoder'>
+2019-05-07 14:44:30,738 [INFO]  Precision filtering only for CategoricalEncoder returning                             Promotion1 unfiltered
+2019-05-07 14:53:28,369 [INFO]  Using [[cpu(0)]] as the context for training
+2019-05-07 14:53:28,453 [INFO]  Fitting label encoder <class 'datawig.column_encoders.NumericalEncoder'> on 303530 rows                             of training data
+2019-05-07 14:53:28,469 [INFO]  Detected 0 rows with missing labels                         for column Promotion1
+2019-05-07 14:53:28,472 [INFO]  Dropping 0/303530 rows
+2019-05-07 14:53:28,489 [INFO]  Detected 21759 rows with missing labels                         for column Promotion1
+2019-05-07 14:53:28,490 [INFO]  Dropping 21759/33725 rows
+2019-05-07 14:53:28,492 [INFO]  Train: 303530, Test: 11966
+2019-05-07 14:53:28,492 [INFO]  Fitting data encoder <class 'datawig.column_encoders.NumericalEncoder'> on columns Weekly_Sales, Temperature, Fuel_Price, Promotion2, Promotion3, Promotion4, Promotion5, CPI and 303530 rows of training data with parameters {'input_columns': ['Weekly_Sales', 'Temperature', 'Fuel_Price', 'Promotion2', 'Promotion3', 'Promotion4', 'Promotion5', 'CPI'], 'output_column': 'numerical_features-2yW4Acq9GF', 'output_dim': 8, 'normalize': True, 'scaler': None}
+2019-05-07 14:53:28,598 [INFO]  Building Train Iterator with 303530 elements
+2019-05-07 14:53:29,244 [INFO]  Concatenating numeric columns ['Weekly_Sales', 'Temperature', 'Fuel_Price', 'Promotion2', 'Promotion3', 'Promotion4', 'Promotion5', 'CPI'] into numerical_features-2yW4Acq9GF
+2019-05-07 14:53:29,244 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:53:29,269 [INFO]  Data Encoding - Encoded 303536 rows of column                         Weekly_Sales,Temperature,Fuel_Price,Promotion2,Promotion3,Promotion4,Promotion5,CPI with <class 'datawig.column_encoders.NumericalEncoder'> into                         <class 'numpy.ndarray'> of shape (303536, 8)                         and then into shape (303536, 8)
+2019-05-07 14:53:29,272 [INFO]  Concatenating numeric columns ['Promotion1'] into Promotion1
+2019-05-07 14:53:29,272 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:53:29,275 [INFO]  Label Encoding - Encoded 303536 rows of column                             Promotion1 with <class 'datawig.column_encoders.NumericalEncoder'> into                             <class 'numpy.ndarray'> of shape (303536, 1) and                             then into shape (303536, 1)
+2019-05-07 14:53:29,278 [INFO]  Building Test Iterator with 11966 elements
+2019-05-07 14:53:29,311 [INFO]  Concatenating numeric columns ['Weekly_Sales', 'Temperature', 'Fuel_Price', 'Promotion2', 'Promotion3', 'Promotion4', 'Promotion5', 'CPI'] into numerical_features-2yW4Acq9GF
+2019-05-07 14:53:29,312 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:53:29,313 [INFO]  Data Encoding - Encoded 11968 rows of column                         Weekly_Sales,Temperature,Fuel_Price,Promotion2,Promotion3,Promotion4,Promotion5,CPI with <class 'datawig.column_encoders.NumericalEncoder'> into                         <class 'numpy.ndarray'> of shape (11968, 8)                         and then into shape (11968, 8)
+2019-05-07 14:53:29,315 [INFO]  Concatenating numeric columns ['Promotion1'] into Promotion1
+2019-05-07 14:53:29,315 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:53:29,316 [INFO]  Label Encoding - Encoded 11968 rows of column                             Promotion1 with <class 'datawig.column_encoders.NumericalEncoder'> into                             <class 'numpy.ndarray'> of shape (11968, 1) and                             then into shape (11968, 1)
+2019-05-07 14:53:29,322 [INFO]  Concatenating all 1 latent symbols
+2019-05-07 14:53:29,322 [INFO]  Constructing numerical loss for column Promotion1
+2019-05-07 14:53:29,323 [INFO]  Building output symbols
+2019-05-07 14:53:29,326 [INFO]  
+========== start: fit model
+2019-05-07 14:53:29,326 [WARNING]  Already bound, ignoring bind()
+2019-05-07 14:53:36,816 [INFO]  Epoch[0] Batch [0-9486]	Speed: 20277.30 samples/sec	cross-entropy=5.079697	Promotion1-accuracy=0.000000
+2019-05-07 14:53:44,356 [INFO]  Epoch[0] Train-cross-entropy=4.672415
+2019-05-07 14:53:44,356 [INFO]  Epoch[0] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:53:44,356 [INFO]  Epoch[0] Time cost=15.029
+2019-05-07 14:53:44,358 [INFO]  Saved checkpoint to "imputer_model/model-0000.params"
+2019-05-07 14:53:44,587 [INFO]  Epoch[0] Validation-cross-entropy=11.159599
+2019-05-07 14:53:44,587 [INFO]  Epoch[0] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:53:52,035 [INFO]  Epoch[1] Batch [0-9486]	Speed: 20381.84 samples/sec	cross-entropy=4.251766	Promotion1-accuracy=0.000000
+2019-05-07 14:53:59,521 [INFO]  Epoch[1] Train-cross-entropy=4.125200
+2019-05-07 14:53:59,521 [INFO]  Epoch[1] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:53:59,521 [INFO]  Epoch[1] Time cost=14.934
+2019-05-07 14:53:59,523 [INFO]  Saved checkpoint to "imputer_model/model-0001.params"
+2019-05-07 14:53:59,768 [INFO]  Epoch[1] Validation-cross-entropy=10.736740
+2019-05-07 14:53:59,768 [INFO]  Epoch[1] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:54:07,193 [INFO]  Epoch[2] Batch [0-9486]	Speed: 20445.11 samples/sec	cross-entropy=4.082462	Promotion1-accuracy=0.000000
+2019-05-07 14:54:14,640 [INFO]  Epoch[2] Train-cross-entropy=3.955940
+2019-05-07 14:54:14,641 [INFO]  Epoch[2] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:54:14,641 [INFO]  Epoch[2] Time cost=14.873
+2019-05-07 14:54:14,643 [INFO]  Saved checkpoint to "imputer_model/model-0002.params"
+2019-05-07 14:54:14,880 [INFO]  Epoch[2] Validation-cross-entropy=10.111197
+2019-05-07 14:54:14,881 [INFO]  Epoch[2] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:54:22,858 [INFO]  Epoch[3] Batch [0-9486]	Speed: 19028.09 samples/sec	cross-entropy=3.902977	Promotion1-accuracy=0.000000
+2019-05-07 14:54:30,791 [INFO]  Epoch[3] Train-cross-entropy=3.801030
+2019-05-07 14:54:30,791 [INFO]  Epoch[3] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:54:30,791 [INFO]  Epoch[3] Time cost=15.910
+2019-05-07 14:54:30,798 [INFO]  Saved checkpoint to "imputer_model/model-0003.params"
+2019-05-07 14:54:31,055 [INFO]  Epoch[3] Validation-cross-entropy=9.933211
+2019-05-07 14:54:31,055 [INFO]  Epoch[3] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:54:38,769 [INFO]  Epoch[4] Batch [0-9486]	Speed: 19678.81 samples/sec	cross-entropy=3.801809	Promotion1-accuracy=0.000000
+2019-05-07 14:54:46,740 [INFO]  Epoch[4] Train-cross-entropy=3.714921
+2019-05-07 14:54:46,740 [INFO]  Epoch[4] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:54:46,740 [INFO]  Epoch[4] Time cost=15.685
+2019-05-07 14:54:46,742 [INFO]  Saved checkpoint to "imputer_model/model-0004.params"
+2019-05-07 14:54:46,971 [INFO]  Epoch[4] Validation-cross-entropy=9.784401
+2019-05-07 14:54:46,971 [INFO]  Epoch[4] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:54:54,531 [INFO]  Epoch[5] Batch [0-9486]	Speed: 20079.87 samples/sec	cross-entropy=3.747619	Promotion1-accuracy=0.000000
+2019-05-07 14:55:02,358 [INFO]  Epoch[5] Train-cross-entropy=3.676693
+2019-05-07 14:55:02,358 [INFO]  Epoch[5] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:55:02,358 [INFO]  Epoch[5] Time cost=15.387
+2019-05-07 14:55:02,360 [INFO]  Saved checkpoint to "imputer_model/model-0005.params"
+2019-05-07 14:55:02,593 [INFO]  Epoch[5] Validation-cross-entropy=9.456019
+2019-05-07 14:55:02,593 [INFO]  Epoch[5] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:55:10,135 [INFO]  Epoch[6] Batch [0-9486]	Speed: 20127.31 samples/sec	cross-entropy=3.721323	Promotion1-accuracy=0.000000
+2019-05-07 14:55:17,542 [INFO]  Epoch[6] Train-cross-entropy=3.645885
+2019-05-07 14:55:17,542 [INFO]  Epoch[6] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:55:17,543 [INFO]  Epoch[6] Time cost=14.950
+2019-05-07 14:55:17,544 [INFO]  Saved checkpoint to "imputer_model/model-0006.params"
+2019-05-07 14:55:17,788 [INFO]  Epoch[6] Validation-cross-entropy=9.311863
+2019-05-07 14:55:17,788 [INFO]  Epoch[6] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:55:25,281 [INFO]  Epoch[7] Batch [0-9486]	Speed: 20259.44 samples/sec	cross-entropy=3.685206	Promotion1-accuracy=0.000000
+2019-05-07 14:55:32,606 [INFO]  Epoch[7] Train-cross-entropy=3.617017
+2019-05-07 14:55:32,606 [INFO]  Epoch[7] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:55:32,606 [INFO]  Epoch[7] Time cost=14.818
+2019-05-07 14:55:32,608 [INFO]  Saved checkpoint to "imputer_model/model-0007.params"
+2019-05-07 14:55:32,837 [INFO]  Epoch[7] Validation-cross-entropy=9.364895
+2019-05-07 14:55:32,838 [INFO]  Epoch[7] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:55:40,345 [INFO]  Epoch[8] Batch [0-9486]	Speed: 20220.55 samples/sec	cross-entropy=3.654465	Promotion1-accuracy=0.000000
+2019-05-07 14:55:47,665 [INFO]  Epoch[8] Train-cross-entropy=3.585408
+2019-05-07 14:55:47,665 [INFO]  Epoch[8] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:55:47,665 [INFO]  Epoch[8] Time cost=14.828
+2019-05-07 14:55:47,667 [INFO]  Saved checkpoint to "imputer_model/model-0008.params"
+2019-05-07 14:55:47,907 [INFO]  Epoch[8] Validation-cross-entropy=9.335467
+2019-05-07 14:55:47,907 [INFO]  Epoch[8] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:55:55,383 [INFO]  Epoch[9] Batch [0-9486]	Speed: 20303.44 samples/sec	cross-entropy=3.626540	Promotion1-accuracy=0.000000
+2019-05-07 14:56:02,714 [INFO]  Epoch[9] Train-cross-entropy=3.559044
+2019-05-07 14:56:02,714 [INFO]  Epoch[9] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:56:02,714 [INFO]  Epoch[9] Time cost=14.808
+2019-05-07 14:56:02,717 [INFO]  Saved checkpoint to "imputer_model/model-0009.params"
+2019-05-07 14:56:02,948 [INFO]  Epoch[9] Validation-cross-entropy=9.210750
+2019-05-07 14:56:02,948 [INFO]  Epoch[9] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:56:10,442 [INFO]  Epoch[10] Batch [0-9486]	Speed: 20257.85 samples/sec	cross-entropy=3.603998	Promotion1-accuracy=0.000000
+2019-05-07 14:56:17,835 [INFO]  Epoch[10] Train-cross-entropy=3.534874
+2019-05-07 14:56:17,835 [INFO]  Epoch[10] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:56:17,835 [INFO]  Epoch[10] Time cost=14.887
+2019-05-07 14:56:17,837 [INFO]  Saved checkpoint to "imputer_model/model-0010.params"
+2019-05-07 14:56:18,079 [INFO]  Epoch[10] Validation-cross-entropy=9.257288
+2019-05-07 14:56:18,080 [INFO]  Epoch[10] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:56:25,513 [INFO]  Epoch[11] Batch [0-9486]	Speed: 20421.85 samples/sec	cross-entropy=3.565337	Promotion1-accuracy=0.000000
+2019-05-07 14:56:32,943 [INFO]  Epoch[11] Train-cross-entropy=3.501101
+2019-05-07 14:56:32,943 [INFO]  Epoch[11] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:56:32,943 [INFO]  Epoch[11] Time cost=14.864
+2019-05-07 14:56:32,945 [INFO]  Saved checkpoint to "imputer_model/model-0011.params"
+2019-05-07 14:56:33,174 [INFO]  Epoch[11] Validation-cross-entropy=9.092818
+2019-05-07 14:56:33,175 [INFO]  Epoch[11] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:56:40,527 [INFO]  Epoch[12] Batch [0-9486]	Speed: 20645.78 samples/sec	cross-entropy=3.546516	Promotion1-accuracy=0.000000
+2019-05-07 14:56:47,920 [INFO]  Epoch[12] Train-cross-entropy=3.483992
+2019-05-07 14:56:47,920 [INFO]  Epoch[12] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:56:47,920 [INFO]  Epoch[12] Time cost=14.746
+2019-05-07 14:56:47,922 [INFO]  Saved checkpoint to "imputer_model/model-0012.params"
+2019-05-07 14:56:48,161 [INFO]  Epoch[12] Validation-cross-entropy=9.043153
+2019-05-07 14:56:48,162 [INFO]  Epoch[12] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:56:55,491 [INFO]  Epoch[13] Batch [0-9486]	Speed: 20710.78 samples/sec	cross-entropy=3.515959	Promotion1-accuracy=0.000000
+2019-05-07 14:57:02,882 [INFO]  Epoch[13] Train-cross-entropy=3.455516
+2019-05-07 14:57:02,882 [INFO]  Epoch[13] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:57:02,882 [INFO]  Epoch[13] Time cost=14.720
+2019-05-07 14:57:02,884 [INFO]  Saved checkpoint to "imputer_model/model-0013.params"
+2019-05-07 14:57:03,115 [INFO]  Epoch[13] Validation-cross-entropy=8.880119
+2019-05-07 14:57:03,115 [INFO]  Epoch[13] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:57:10,471 [INFO]  Epoch[14] Batch [0-9486]	Speed: 20636.86 samples/sec	cross-entropy=3.497544	Promotion1-accuracy=0.000000
+2019-05-07 14:57:17,928 [INFO]  Epoch[14] Train-cross-entropy=3.445205
+2019-05-07 14:57:17,928 [INFO]  Epoch[14] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:57:17,928 [INFO]  Epoch[14] Time cost=14.813
+2019-05-07 14:57:17,930 [INFO]  Saved checkpoint to "imputer_model/model-0014.params"
+2019-05-07 14:57:18,175 [INFO]  Epoch[14] Validation-cross-entropy=8.938867
+2019-05-07 14:57:18,176 [INFO]  Epoch[14] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:57:25,568 [INFO]  Epoch[15] Batch [0-9486]	Speed: 20534.00 samples/sec	cross-entropy=3.478578	Promotion1-accuracy=0.000000
+2019-05-07 14:57:32,939 [INFO]  Epoch[15] Train-cross-entropy=3.425290
+2019-05-07 14:57:32,939 [INFO]  Epoch[15] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:57:32,939 [INFO]  Epoch[15] Time cost=14.763
+2019-05-07 14:57:32,941 [INFO]  Saved checkpoint to "imputer_model/model-0015.params"
+2019-05-07 14:57:33,175 [INFO]  Epoch[15] Validation-cross-entropy=8.857998
+2019-05-07 14:57:33,175 [INFO]  Epoch[15] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:57:40,598 [INFO]  Epoch[16] Batch [0-9486]	Speed: 20448.78 samples/sec	cross-entropy=3.472457	Promotion1-accuracy=0.000000
+2019-05-07 14:57:47,978 [INFO]  Epoch[16] Train-cross-entropy=3.422310
+2019-05-07 14:57:47,978 [INFO]  Epoch[16] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:57:47,978 [INFO]  Epoch[16] Time cost=14.803
+2019-05-07 14:57:47,980 [INFO]  Saved checkpoint to "imputer_model/model-0016.params"
+2019-05-07 14:57:48,222 [INFO]  Epoch[16] Validation-cross-entropy=8.852682
+2019-05-07 14:57:48,222 [INFO]  Epoch[16] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:57:55,638 [INFO]  Epoch[17] Batch [0-9486]	Speed: 20469.92 samples/sec	cross-entropy=3.470973	Promotion1-accuracy=0.000000
+2019-05-07 14:58:02,986 [INFO]  Epoch[17] Train-cross-entropy=3.418999
+2019-05-07 14:58:02,986 [INFO]  Epoch[17] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:58:02,986 [INFO]  Epoch[17] Time cost=14.764
+2019-05-07 14:58:02,988 [INFO]  Saved checkpoint to "imputer_model/model-0017.params"
+2019-05-07 14:58:03,225 [INFO]  Epoch[17] Validation-cross-entropy=8.792788
+2019-05-07 14:58:03,225 [INFO]  Epoch[17] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:58:10,659 [INFO]  Epoch[18] Batch [0-9486]	Speed: 20420.03 samples/sec	cross-entropy=3.460549	Promotion1-accuracy=0.000000
+2019-05-07 14:58:18,051 [INFO]  Epoch[18] Train-cross-entropy=3.408496
+2019-05-07 14:58:18,051 [INFO]  Epoch[18] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:58:18,051 [INFO]  Epoch[18] Time cost=14.826
+2019-05-07 14:58:18,053 [INFO]  Saved checkpoint to "imputer_model/model-0018.params"
+2019-05-07 14:58:18,290 [INFO]  Epoch[18] Validation-cross-entropy=8.788988
+2019-05-07 14:58:18,290 [INFO]  Epoch[18] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:58:25,772 [INFO]  Epoch[19] Batch [0-9486]	Speed: 20287.67 samples/sec	cross-entropy=3.452853	Promotion1-accuracy=0.000000
+2019-05-07 14:58:33,098 [INFO]  Epoch[19] Train-cross-entropy=3.398291
+2019-05-07 14:58:33,098 [INFO]  Epoch[19] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:58:33,098 [INFO]  Epoch[19] Time cost=14.808
+2019-05-07 14:58:33,100 [INFO]  Saved checkpoint to "imputer_model/model-0019.params"
+2019-05-07 14:58:33,327 [INFO]  Epoch[19] Validation-cross-entropy=8.937617
+2019-05-07 14:58:33,327 [INFO]  Epoch[19] Validation-Promotion1-accuracy=0.000000
+2019-05-07 14:58:40,740 [INFO]  Epoch[20] Batch [0-9486]	Speed: 20480.44 samples/sec	cross-entropy=3.449663	Promotion1-accuracy=0.000000
+2019-05-07 14:58:48,074 [INFO]  Epoch[20] Train-cross-entropy=3.391612
+2019-05-07 14:58:48,075 [INFO]  Epoch[20] Train-Promotion1-accuracy=0.000000
+2019-05-07 14:58:48,075 [INFO]  Epoch[20] Time cost=14.747
+2019-05-07 14:58:48,077 [INFO]  Saved checkpoint to "imputer_model/model-0020.params"
+2019-05-07 14:58:48,316 [INFO]  No improvement detected for 3 epochs compared to 8.79278781898519 last error obtained: 9.166518398306586, stopping here
+2019-05-07 14:58:48,317 [INFO]  Stopping training, patience reached
+2019-05-07 14:58:48,317 [INFO]  
+========== done (318.99097299575806 s) fit model
+2019-05-07 14:58:48,923 [INFO]  Expected calibration error: 97.2%
+2019-05-07 14:58:49,584 [INFO]  Expected calibration error after calibration: 97.2%
+2019-05-07 14:58:50,135 [INFO]  save metrics in imputer_model/fit-test-metrics.json
+2019-05-07 14:58:50,136 [INFO]  Keeping imputer_model/model-0018.params
+2019-05-07 14:58:50,136 [INFO]  Deleting imputer_model/model-0005.params
+2019-05-07 14:58:50,137 [INFO]  Deleting imputer_model/model-0002.params
+2019-05-07 14:58:50,137 [INFO]  Deleting imputer_model/model-0012.params
+2019-05-07 14:58:50,137 [INFO]  Deleting imputer_model/model-0008.params
+2019-05-07 14:58:50,138 [INFO]  Deleting imputer_model/model-0011.params
+2019-05-07 14:58:50,138 [INFO]  Deleting imputer_model/model-0001.params
+2019-05-07 14:58:50,138 [INFO]  Deleting imputer_model/model-0016.params
+2019-05-07 14:58:50,139 [INFO]  Deleting imputer_model/model-0017.params
+2019-05-07 14:58:50,139 [INFO]  Deleting imputer_model/model-0013.params
+2019-05-07 14:58:50,139 [INFO]  Deleting imputer_model/model-0009.params
+2019-05-07 14:58:50,139 [INFO]  Deleting imputer_model/model-0019.params
+2019-05-07 14:58:50,140 [INFO]  Deleting imputer_model/model-0006.params
+2019-05-07 14:58:50,140 [INFO]  Deleting imputer_model/model-0000.params
+2019-05-07 14:58:50,140 [INFO]  Deleting imputer_model/model-0015.params
+2019-05-07 14:58:50,140 [INFO]  Deleting imputer_model/model-0010.params
+2019-05-07 14:58:50,141 [INFO]  Deleting imputer_model/model-0003.params
+2019-05-07 14:58:50,141 [INFO]  Deleting imputer_model/model-0020.params
+2019-05-07 14:58:50,141 [INFO]  Deleting imputer_model/model-0007.params
+2019-05-07 14:58:50,141 [INFO]  Deleting imputer_model/model-0014.params
+2019-05-07 14:58:50,142 [INFO]  Deleting imputer_model/model-0004.params
+2019-05-07 14:58:50,346 [INFO]  Concatenating numeric columns ['Weekly_Sales', 'Temperature', 'Fuel_Price', 'Promotion2', 'Promotion3', 'Promotion4', 'Promotion5', 'CPI'] into numerical_features-2yW4Acq9GF
+2019-05-07 14:58:50,346 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:58:50,352 [INFO]  Data Encoding - Encoded 84320 rows of column                         Weekly_Sales,Temperature,Fuel_Price,Promotion2,Promotion3,Promotion4,Promotion5,CPI with <class 'datawig.column_encoders.NumericalEncoder'> into                         <class 'numpy.ndarray'> of shape (84320, 8)                         and then into shape (84320, 8)
+2019-05-07 14:58:50,354 [INFO]  Concatenating numeric columns ['Promotion1'] into Promotion1
+2019-05-07 14:58:50,354 [INFO]  Normalizing with StandardScaler
+2019-05-07 14:58:50,355 [INFO]  Label Encoding - Encoded 84320 rows of column                             Promotion1 with <class 'datawig.column_encoders.NumericalEncoder'> into                             <class 'numpy.ndarray'> of shape (84320, 1) and                             then into shape (84320, 1)
+2019-05-07 14:58:52,175 [INFO]  Top-k only for CategoricalEncoder, dropping Promotion1, <class 'datawig.column_encoders.NumericalEncoder'>
+2019-05-07 14:58:52,175 [INFO]  Precision filtering only for CategoricalEncoder returning                             Promotion1 unfiltered
+2019-05-07 15:13:03,240 [INFO]  Using [[cpu(0)]] as the context for training
+2019-05-07 15:13:03,325 [INFO]  Fitting label encoder <class 'datawig.column_encoders.NumericalEncoder'> on 303530 rows                             of training data
+2019-05-07 15:13:03,341 [INFO]  Detected 0 rows with missing labels                         for column Promotion1
+2019-05-07 15:13:03,344 [INFO]  Dropping 0/303530 rows
+2019-05-07 15:13:03,362 [INFO]  Detected 21759 rows with missing labels                         for column Promotion1
+2019-05-07 15:13:03,363 [INFO]  Dropping 21759/33725 rows
+2019-05-07 15:13:03,365 [INFO]  Train: 303530, Test: 11966
+2019-05-07 15:13:03,365 [INFO]  Fitting data encoder <class 'datawig.column_encoders.NumericalEncoder'> on columns Weekly_Sales, Temperature, Fuel_Price, Promotion2, Promotion3, Promotion4, Promotion5, CPI and 303530 rows of training data with parameters {'input_columns': ['Weekly_Sales', 'Temperature', 'Fuel_Price', 'Promotion2', 'Promotion3', 'Promotion4', 'Promotion5', 'CPI'], 'output_column': 'numerical_features-2yW4Acq9GF', 'output_dim': 8, 'normalize': True, 'scaler': None}
+2019-05-07 15:13:03,466 [INFO]  Building Train Iterator with 303530 elements
+2019-05-07 15:13:04,085 [INFO]  Concatenating numeric columns ['Weekly_Sales', 'Temperature', 'Fuel_Price', 'Promotion2', 'Promotion3', 'Promotion4', 'Promotion5', 'CPI'] into numerical_features-2yW4Acq9GF
+2019-05-07 15:13:04,085 [INFO]  Normalizing with StandardScaler
+2019-05-07 15:13:04,109 [INFO]  Data Encoding - Encoded 303536 rows of column                         Weekly_Sales,Temperature,Fuel_Price,Promotion2,Promotion3,Promotion4,Promotion5,CPI with <class 'datawig.column_encoders.NumericalEncoder'> into                         <class 'numpy.ndarray'> of shape (303536, 8)                         and then into shape (303536, 8)
+2019-05-07 15:13:04,112 [INFO]  Concatenating numeric columns ['Promotion1'] into Promotion1
+2019-05-07 15:13:04,112 [INFO]  Normalizing with StandardScaler
+2019-05-07 15:13:04,115 [INFO]  Label Encoding - Encoded 303536 rows of column                             Promotion1 with <class 'datawig.column_encoders.NumericalEncoder'> into                             <class 'numpy.ndarray'> of shape (303536, 1) and                             then into shape (303536, 1)
+2019-05-07 15:13:04,118 [INFO]  Building Test Iterator with 11966 elements
+2019-05-07 15:13:04,151 [INFO]  Concatenating numeric columns ['Weekly_Sales', 'Temperature', 'Fuel_Price', 'Promotion2', 'Promotion3', 'Promotion4', 'Promotion5', 'CPI'] into numerical_features-2yW4Acq9GF
+2019-05-07 15:13:04,151 [INFO]  Normalizing with StandardScaler
+2019-05-07 15:13:04,153 [INFO]  Data Encoding - Encoded 11968 rows of column                         Weekly_Sales,Temperature,Fuel_Price,Promotion2,Promotion3,Promotion4,Promotion5,CPI with <class 'datawig.column_encoders.NumericalEncoder'> into                         <class 'numpy.ndarray'> of shape (11968, 8)                         and then into shape (11968, 8)
+2019-05-07 15:13:04,155 [INFO]  Concatenating numeric columns ['Promotion1'] into Promotion1
+2019-05-07 15:13:04,155 [INFO]  Normalizing with StandardScaler
+2019-05-07 15:13:04,156 [INFO]  Label Encoding - Encoded 11968 rows of column                             Promotion1 with <class 'datawig.column_encoders.NumericalEncoder'> into                             <class 'numpy.ndarray'> of shape (11968, 1) and                             then into shape (11968, 1)
+2019-05-07 15:13:04,161 [INFO]  Concatenating all 1 latent symbols
+2019-05-07 15:13:04,161 [INFO]  Constructing numerical loss for column Promotion1
+2019-05-07 15:13:04,162 [INFO]  Building output symbols
+2019-05-07 15:13:04,165 [INFO]  
+========== start: fit model
+2019-05-07 15:13:04,165 [WARNING]  Already bound, ignoring bind()
+2019-05-07 15:13:11,609 [INFO]  Epoch[0] Batch [0-9486]	Speed: 20403.23 samples/sec	cross-entropy=5.079697	Promotion1-accuracy=0.000000
+2019-05-07 15:13:19,026 [INFO]  Epoch[0] Train-cross-entropy=4.672415
+2019-05-07 15:13:19,026 [INFO]  Epoch[0] Train-Promotion1-accuracy=0.000000
+2019-05-07 15:13:19,027 [INFO]  Epoch[0] Time cost=14.861
+2019-05-07 15:13:19,029 [INFO]  Saved checkpoint to "imputer_model/model-0000.params"
+2019-05-07 15:13:19,257 [INFO]  Epoch[0] Validation-cross-entropy=11.159599
+2019-05-07 15:13:19,257 [INFO]  Epoch[0] Validation-Promotion1-accuracy=0.000000
+2019-05-07 15:13:26,674 [INFO]  Epoch[1] Batch [0-9486]	Speed: 20468.56 samples/sec	cross-entropy=4.251766	Promotion1-accuracy=0.000000
+2019-05-07 15:13:34,079 [INFO]  Epoch[1] Train-cross-entropy=4.125200
+2019-05-07 15:13:34,079 [INFO]  Epoch[1] Train-Promotion1-accuracy=0.000000
+2019-05-07 15:13:34,080 [INFO]  Epoch[1] Time cost=14.822
+2019-05-07 15:13:34,081 [INFO]  Saved checkpoint to "imputer_model/model-0001.params"
+2019-05-07 15:13:34,312 [INFO]  Epoch[1] Validation-cross-entropy=10.736740
+2019-05-07 15:13:34,312 [INFO]  Epoch[1] Validation-Promotion1-accuracy=0.000000
+2019-05-07 15:13:41,677 [INFO]  Epoch[2] Batch [0-9486]	Speed: 20612.01 samples/sec	cross-entropy=4.082462	Promotion1-accuracy=0.000000
+2019-05-07 15:13:49,049 [INFO]  Epoch[2] Train-cross-entropy=3.955940
+2019-05-07 15:13:49,049 [INFO]  Epoch[2] Train-Promotion1-accuracy=0.000000
+2019-05-07 15:13:49,050 [INFO]  Epoch[2] Time cost=14.737
+2019-05-07 15:13:49,051 [INFO]  Saved checkpoint to "imputer_model/model-0002.params"
+2019-05-07 15:13:49,291 [INFO]  Epoch[2] Validation-cross-entropy=10.111197
+2019-05-07 15:13:49,291 [INFO]  Epoch[2] Validation-Promotion1-accuracy=0.000000
+2019-05-07 15:13:56,622 [INFO]  Epoch[3] Batch [0-9486]	Speed: 20704.14 samples/sec	cross-entropy=3.902977	Promotion1-accuracy=0.000000
+2019-05-07 15:14:04,002 [INFO]  Epoch[3] Train-cross-entropy=3.801030
+2019-05-07 15:14:04,002 [INFO]  Epoch[3] Train-Promotion1-accuracy=0.000000
+2019-05-07 15:14:04,002 [INFO]  Epoch[3] Time cost=14.711
+2019-05-07 15:14:04,004 [INFO]  Saved checkpoint to "imputer_model/model-0003.params"
+2019-05-07 15:14:04,240 [INFO]  Epoch[3] Validation-cross-entropy=9.933211
+2019-05-07 15:14:04,240 [INFO]  Epoch[3] Validation-Promotion1-accuracy=0.000000
+2019-05-07 15:14:11,659 [INFO]  Epoch[4] Batch [0-9486]	Speed: 20461.27 samples/sec	cross-entropy=3.801809	Promotion1-accuracy=0.000000
+2019-05-07 15:14:19,116 [INFO]  Epoch[4] Train-cross-entropy=3.714921
+2019-05-07 15:14:19,116 [INFO]  Epoch[4] Train-Promotion1-accuracy=0.000000
+2019-05-07 15:14:19,116 [INFO]  Epoch[4] Time cost=14.876
+2019-05-07 15:14:19,118 [INFO]  Saved checkpoint to "imputer_model/model-0004.params"
+2019-05-07 15:14:19,345 [INFO]  Epoch[4] Validation-cross-entropy=9.784401
+2019-05-07 15:14:19,345 [INFO]  Epoch[4] Validation-Promotion1-accuracy=0.000000
+2019-05-07 15:14:26,848 [INFO]  Epoch[5] Batch [0-9486]	Speed: 20230.41 samples/sec	cross-entropy=3.747619	Promotion1-accuracy=0.000000
+2019-05-07 15:14:34,125 [INFO]  Epoch[5] Train-cross-entropy=3.676693
+2019-05-07 15:14:34,125 [INFO]  Epoch[5] Train-Promotion1-accuracy=0.000000
+2019-05-07 15:14:34,125 [INFO]  Epoch[5] Time cost=14.780
+2019-05-07 15:14:34,127 [INFO]  Saved checkpoint to "imputer_model/model-0005.params"
+2019-05-07 15:14:34,368 [INFO]  Epoch[5] Validation-cross-entropy=9.456019
+2019-05-07 15:14:34,368 [INFO]  Epoch[5] Validation-Promotion1-accuracy=0.000000
+2019-05-07 15:14:41,715 [INFO]  Epoch[6] Batch [0-9486]	Speed: 20659.41 samples/sec	cross-entropy=3.721323	Promotion1-accuracy=0.000000
+2019-05-07 15:14:48,985 [INFO]  Epoch[6] Train-cross-entropy=3.645885
+2019-05-07 15:14:48,985 [INFO]  Epoch[6] Train-Promotion1-accuracy=0.000000
+2019-05-07 15:14:48,986 [INFO]  Epoch[6] Time cost=14.618
+2019-05-07 15:14:48,987 [INFO]  Saved checkpoint to "imputer_model/model-0006.params"
+2019-05-07 15:14:49,230 [INFO]  Epoch[6] Validation-cross-entropy=9.311863
+2019-05-07 15:14:49,230 [INFO]  Epoch[6] Validation-Promotion1-accuracy=0.000000
+2019-05-07 15:14:56,550 [INFO]  Epoch[7] Batch [0-9486]	Speed: 20738.10 samples/sec	cross-entropy=3.685206	Promotion1-accuracy=0.000000
+2019-05-07 15:15:03,821 [INFO]  Epoch[7] Train-cross-entropy=3.617017
+2019-05-07 15:15:03,822 [INFO]  Epoch[7] Train-Promotion1-accuracy=0.000000
+2019-05-07 15:15:03,822 [INFO]  Epoch[7] Time cost=14.592
+2019-05-07 15:15:03,824 [INFO]  Saved checkpoint to "imputer_model/model-0007.params"
+2019-05-07 15:15:04,056 [INFO]  Epoch[7] Validation-cross-entropy=9.364895
+2019-05-07 15:15:04,056 [INFO]  Epoch[7] Validation-Promotion1-accuracy=0.000000
+2019-05-07 15:15:11,417 [INFO]  Epoch[8] Batch [0-9486]	Speed: 20623.41 samples/sec	cross-entropy=3.654465	Promotion1-accuracy=0.000000
+2019-05-07 15:15:18,705 [INFO]  Epoch[8] Train-cross-entropy=3.585408
+2019-05-07 15:15:18,705 [INFO]  Epoch[8] Train-Promotion1-accuracy=0.000000
+2019-05-07 15:15:18,705 [INFO]  Epoch[8] Time cost=14.649
+2019-05-07 15:15:18,707 [INFO]  Saved checkpoint to "imputer_model/model-0008.params"
+2019-05-07 15:15:18,953 [INFO]  Epoch[8] Validation-cross-entropy=9.335467
+2019-05-07 15:15:18,953 [INFO]  Epoch[8] Validation-Promotion1-accuracy=0.000000
+2019-05-07 15:15:26,301 [INFO]  Epoch[9] Batch [0-9486]	Speed: 20657.74 samples/sec	cross-entropy=3.626540	Promotion1-accuracy=0.000000
+2019-05-07 15:15:33,572 [INFO]  Epoch[9] Train-cross-entropy=3.559044
+2019-05-07 15:15:33,572 [INFO]  Epoch[9] Train-Promotion1-accuracy=0.000000
+2019-05-07 15:15:33,572 [INFO]  Epoch[9] Time cost=14.619
+2019-05-07 15:15:33,574 [INFO]  Saved checkpoint to "imputer_model/model-0009.params"
+2019-05-07 15:15:33,802 [INFO]  Epoch[9] Validation-cross-entropy=9.210750
+2019-05-07 15:15:33,803 [INFO]  Epoch[9] Validation-Promotion1-accuracy=0.000000
+2019-05-07 15:15:41,156 [INFO]  Epoch[10] Batch [0-9486]	Speed: 20642.71 samples/sec	cross-entropy=3.603998	Promotion1-accuracy=0.000000
+2019-05-07 15:15:48,455 [INFO]  Epoch[10] Train-cross-entropy=3.534874
+2019-05-07 15:15:48,455 [INFO]  Epoch[10] Train-Promotion1-accuracy=0.000000
+2019-05-07 15:15:48,456 [INFO]  Epoch[10] Time cost=14.653
+2019-05-07 15:15:48,457 [INFO]  Saved checkpoint to "imputer_model/model-0010.params"
+2019-05-07 15:15:48,700 [INFO]  Epoch[10] Validation-cross-entropy=9.257288
+2019-05-07 15:15:48,700 [INFO]  Epoch[10] Validation-Promotion1-accuracy=0.000000
+2019-05-07 15:15:56,039 [INFO]  Epoch[11] Batch [0-9486]	Speed: 20683.17 samples/sec	cross-entropy=3.565337	Promotion1-accuracy=0.000000
+2019-05-07 15:16:03,350 [INFO]  Epoch[11] Train-cross-entropy=3.501101
+2019-05-07 15:16:03,350 [INFO]  Epoch[11] Train-Promotion1-accuracy=0.000000
+2019-05-07 15:16:03,350 [INFO]  Epoch[11] Time cost=14.650
+2019-05-07 15:16:03,352 [INFO]  Saved checkpoint to "imputer_model/model-0011.params"
+2019-05-07 15:16:03,585 [INFO]  Epoch[11] Validation-cross-entropy=9.092818
+2019-05-07 15:16:03,585 [INFO]  Epoch[11] Validation-Promotion1-accuracy=0.000000
+2019-05-07 15:16:10,987 [INFO]  Epoch[12] Batch [0-9486]	Speed: 20507.68 samples/sec	cross-entropy=3.546516	Promotion1-accuracy=0.000000
+2019-05-07 15:16:18,348 [INFO]  Epoch[12] Train-cross-entropy=3.483992
+2019-05-07 15:16:18,348 [INFO]  Epoch[12] Train-Promotion1-accuracy=0.000000
+2019-05-07 15:16:18,348 [INFO]  Epoch[12] Time cost=14.763
+2019-05-07 15:16:18,350 [INFO]  Saved checkpoint to "imputer_model/model-0012.params"
+2019-05-07 15:16:18,600 [INFO]  Epoch[12] Validation-cross-entropy=9.043153
+2019-05-07 15:16:18,600 [INFO]  Epoch[12] Validation-Promotion1-accuracy=0.000000
+2019-05-07 15:16:25,991 [INFO]  Epoch[13] Batch [0-9486]	Speed: 20539.27 samples/sec	cross-entropy=3.515959	Promotion1-accuracy=0.000000
+2019-05-07 15:16:33,333 [INFO]  Epoch[13] Train-cross-entropy=3.455516
+2019-05-07 15:16:33,333 [INFO]  Epoch[13] Train-Promotion1-accuracy=0.000000
+2019-05-07 15:16:33,333 [INFO]  Epoch[13] Time cost=14.733
+2019-05-07 15:16:33,335 [INFO]  Saved checkpoint to "imputer_model/model-0013.params"
+2019-05-07 15:16:33,564 [INFO]  Epoch[13] Validation-cross-entropy=8.880119
+2019-05-07 15:16:33,564 [INFO]  Epoch[13] Validation-Promotion1-accuracy=0.000000
+2019-05-07 15:16:40,972 [INFO]  Epoch[14] Batch [0-9486]	Speed: 20492.58 samples/sec	cross-entropy=3.497544	Promotion1-accuracy=0.000000
+2019-05-07 15:16:48,313 [INFO]  Epoch[14] Train-cross-entropy=3.445205
+2019-05-07 15:16:48,313 [INFO]  Epoch[14] Train-Promotion1-accuracy=0.000000
+2019-05-07 15:16:48,313 [INFO]  Epoch[14] Time cost=14.749
+2019-05-07 15:16:48,315 [INFO]  Saved checkpoint to "imputer_model/model-0014.params"
+2019-05-07 15:16:48,563 [INFO]  Epoch[14] Validation-cross-entropy=8.938867
+2019-05-07 15:16:48,563 [INFO]  Epoch[14] Validation-Promotion1-accuracy=0.000000
+2019-05-07 15:16:55,888 [INFO]  Epoch[15] Batch [0-9486]	Speed: 20723.21 samples/sec	cross-entropy=3.478578	Promotion1-accuracy=0.000000
+2019-05-07 15:17:03,224 [INFO]  Epoch[15] Train-cross-entropy=3.425290
+2019-05-07 15:17:03,224 [INFO]  Epoch[15] Train-Promotion1-accuracy=0.000000
+2019-05-07 15:17:03,224 [INFO]  Epoch[15] Time cost=14.661
+2019-05-07 15:17:03,226 [INFO]  Saved checkpoint to "imputer_model/model-0015.params"
+2019-05-07 15:17:03,454 [INFO]  Epoch[15] Validation-cross-entropy=8.857998
+2019-05-07 15:17:03,454 [INFO]  Epoch[15] Validation-Promotion1-accuracy=0.000000
+2019-05-07 15:17:10,806 [INFO]  Epoch[16] Batch [0-9486]	Speed: 20648.27 samples/sec	cross-entropy=3.472457	Promotion1-accuracy=0.000000
+2019-05-07 15:17:18,126 [INFO]  Epoch[16] Train-cross-entropy=3.422310
+2019-05-07 15:17:18,126 [INFO]  Epoch[16] Train-Promotion1-accuracy=0.000000
+2019-05-07 15:17:18,126 [INFO]  Epoch[16] Time cost=14.672
+2019-05-07 15:17:18,128 [INFO]  Saved checkpoint to "imputer_model/model-0016.params"
+2019-05-07 15:17:18,377 [INFO]  Epoch[16] Validation-cross-entropy=8.852682
+2019-05-07 15:17:18,378 [INFO]  Epoch[16] Validation-Promotion1-accuracy=0.000000
+2019-05-07 15:17:25,729 [INFO]  Epoch[17] Batch [0-9486]	Speed: 20649.84 samples/sec	cross-entropy=3.470973	Promotion1-accuracy=0.000000
+2019-05-07 15:17:33,006 [INFO]  Epoch[17] Train-cross-entropy=3.418999
+2019-05-07 15:17:33,006 [INFO]  Epoch[17] Train-Promotion1-accuracy=0.000000
+2019-05-07 15:17:33,006 [INFO]  Epoch[17] Time cost=14.629
+2019-05-07 15:17:33,008 [INFO]  Saved checkpoint to "imputer_model/model-0017.params"
+2019-05-07 15:17:33,239 [INFO]  Epoch[17] Validation-cross-entropy=8.792788
+2019-05-07 15:17:33,239 [INFO]  Epoch[17] Validation-Promotion1-accuracy=0.000000
+2019-05-07 15:17:40,643 [INFO]  Epoch[18] Batch [0-9486]	Speed: 20502.66 samples/sec	cross-entropy=3.460549	Promotion1-accuracy=0.000000
+2019-05-07 15:17:47,972 [INFO]  Epoch[18] Train-cross-entropy=3.408496
+2019-05-07 15:17:47,972 [INFO]  Epoch[18] Train-Promotion1-accuracy=0.000000
+2019-05-07 15:17:47,972 [INFO]  Epoch[18] Time cost=14.733
+2019-05-07 15:17:47,974 [INFO]  Saved checkpoint to "imputer_model/model-0018.params"
+2019-05-07 15:17:48,218 [INFO]  Epoch[18] Validation-cross-entropy=8.788988
+2019-05-07 15:17:48,218 [INFO]  Epoch[18] Validation-Promotion1-accuracy=0.000000
+2019-05-07 15:17:55,675 [INFO]  Epoch[19] Batch [0-9486]	Speed: 20356.41 samples/sec	cross-entropy=3.452853	Promotion1-accuracy=0.000000
+2019-05-07 15:18:02,977 [INFO]  Epoch[19] Train-cross-entropy=3.398291
+2019-05-07 15:18:02,978 [INFO]  Epoch[19] Train-Promotion1-accuracy=0.000000
+2019-05-07 15:18:02,978 [INFO]  Epoch[19] Time cost=14.759
+2019-05-07 15:18:02,980 [INFO]  Saved checkpoint to "imputer_model/model-0019.params"
+2019-05-07 15:18:03,214 [INFO]  Epoch[19] Validation-cross-entropy=8.937617
+2019-05-07 15:18:03,215 [INFO]  Epoch[19] Validation-Promotion1-accuracy=0.000000
+2019-05-07 15:18:10,589 [INFO]  Epoch[20] Batch [0-9486]	Speed: 20585.40 samples/sec	cross-entropy=3.449663	Promotion1-accuracy=0.000000
+2019-05-07 15:18:17,879 [INFO]  Epoch[20] Train-cross-entropy=3.391612
+2019-05-07 15:18:17,879 [INFO]  Epoch[20] Train-Promotion1-accuracy=0.000000
+2019-05-07 15:18:17,879 [INFO]  Epoch[20] Time cost=14.664
+2019-05-07 15:18:17,881 [INFO]  Saved checkpoint to "imputer_model/model-0020.params"
+2019-05-07 15:18:18,128 [INFO]  No improvement detected for 3 epochs compared to 8.79278781898519 last error obtained: 9.166518398306586, stopping here
+2019-05-07 15:18:18,128 [INFO]  Stopping training, patience reached
+2019-05-07 15:18:18,128 [INFO]  
+========== done (313.9631359577179 s) fit model
+2019-05-07 15:18:18,727 [INFO]  Expected calibration error: 97.2%
+2019-05-07 15:18:19,366 [INFO]  Expected calibration error after calibration: 97.2%
+2019-05-07 15:18:19,920 [INFO]  save metrics in imputer_model/fit-test-metrics.json
+2019-05-07 15:18:19,921 [INFO]  Keeping imputer_model/model-0018.params
+2019-05-07 15:18:19,921 [INFO]  Deleting imputer_model/model-0010.params
+2019-05-07 15:18:19,921 [INFO]  Deleting imputer_model/model-0019.params
+2019-05-07 15:18:19,921 [INFO]  Deleting imputer_model/model-0001.params
+2019-05-07 15:18:19,922 [INFO]  Deleting imputer_model/model-0016.params
+2019-05-07 15:18:19,922 [INFO]  Deleting imputer_model/model-0008.params
+2019-05-07 15:18:19,922 [INFO]  Deleting imputer_model/model-0017.params
+2019-05-07 15:18:19,922 [INFO]  Deleting imputer_model/model-0005.params
+2019-05-07 15:18:19,922 [INFO]  Deleting imputer_model/model-0007.params
+2019-05-07 15:18:19,923 [INFO]  Deleting imputer_model/model-0014.params
+2019-05-07 15:18:19,923 [INFO]  Deleting imputer_model/model-0000.params
+2019-05-07 15:18:19,923 [INFO]  Deleting imputer_model/model-0015.params
+2019-05-07 15:18:19,923 [INFO]  Deleting imputer_model/model-0012.params
+2019-05-07 15:18:19,924 [INFO]  Deleting imputer_model/model-0009.params
+2019-05-07 15:18:19,924 [INFO]  Deleting imputer_model/model-0013.params
+2019-05-07 15:18:19,924 [INFO]  Deleting imputer_model/model-0006.params
+2019-05-07 15:18:19,924 [INFO]  Deleting imputer_model/model-0002.params
+2019-05-07 15:18:19,925 [INFO]  Deleting imputer_model/model-0004.params
+2019-05-07 15:18:19,925 [INFO]  Deleting imputer_model/model-0011.params
+2019-05-07 15:18:19,925 [INFO]  Deleting imputer_model/model-0003.params
+2019-05-07 15:18:19,925 [INFO]  Deleting imputer_model/model-0020.params
+2019-05-07 15:18:20,136 [INFO]  Concatenating numeric columns ['Weekly_Sales', 'Temperature', 'Fuel_Price', 'Promotion2', 'Promotion3', 'Promotion4', 'Promotion5', 'CPI'] into numerical_features-2yW4Acq9GF
+2019-05-07 15:18:20,136 [INFO]  Normalizing with StandardScaler
+2019-05-07 15:18:20,142 [INFO]  Data Encoding - Encoded 84320 rows of column                         Weekly_Sales,Temperature,Fuel_Price,Promotion2,Promotion3,Promotion4,Promotion5,CPI with <class 'datawig.column_encoders.NumericalEncoder'> into                         <class 'numpy.ndarray'> of shape (84320, 8)                         and then into shape (84320, 8)
+2019-05-07 15:18:20,144 [INFO]  Concatenating numeric columns ['Promotion1'] into Promotion1
+2019-05-07 15:18:20,144 [INFO]  Normalizing with StandardScaler
+2019-05-07 15:18:20,146 [INFO]  Label Encoding - Encoded 84320 rows of column                             Promotion1 with <class 'datawig.column_encoders.NumericalEncoder'> into                             <class 'numpy.ndarray'> of shape (84320, 1) and                             then into shape (84320, 1)
+2019-05-07 15:18:21,955 [INFO]  Top-k only for CategoricalEncoder, dropping Promotion1, <class 'datawig.column_encoders.NumericalEncoder'>
+2019-05-07 15:18:21,955 [INFO]  Precision filtering only for CategoricalEncoder returning                             Promotion1 unfiltered
