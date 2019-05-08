@@ -40,25 +40,25 @@
     }, 
     {
       "op": "null", 
-      "name": "label_Promotion1_weight", 
+      "name": "label_CPI_weight", 
       "attrs": {"num_hidden": "1"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "label_Promotion1_bias", 
+      "name": "label_CPI_bias", 
       "attrs": {"num_hidden": "1"}, 
       "inputs": []
     }, 
     {
       "op": "FullyConnected", 
-      "name": "label_Promotion1", 
+      "name": "label_CPI", 
       "attrs": {"num_hidden": "1"}, 
       "inputs": [[5, 0, 0], [6, 0, 0], [7, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "Promotion1", 
+      "name": "CPI", 
       "inputs": []
     }, 
     {
@@ -133,7 +133,7 @@
     }, 
     {
       "op": "BlockGrad", 
-      "name": "pred-Promotion1", 
+      "name": "pred-CPI", 
       "inputs": [[8, 0, 0]]
     }
   ], 
