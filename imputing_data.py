@@ -11,7 +11,7 @@ import pandas as pd
 from sklearn.metrics import r2_score as score
 from sklearn.metrics import classification_report as cr
 
-df = pd.read_csv('Promotion1_imputed.csv')
+df = pd.read_csv('final_df.csv')
 df = df.round(1)
 df = df.fillna(0)
 
