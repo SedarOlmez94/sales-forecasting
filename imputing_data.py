@@ -7,10 +7,8 @@
 # Weekly_Sales f2_score:  0.5619225329783258
 
 import datawig
-import sklearn
 import pandas as pd
 from sklearn.metrics import r2_score as score
-from sklearn.metrics import classification_report as cr
 
 df = pd.read_csv('impute_2013_final.csv')
 df = df.fillna(0)
